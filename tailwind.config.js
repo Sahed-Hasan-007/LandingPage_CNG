@@ -1,14 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './app.vue',
-    './pages/**/*.{vue,js,ts}',
-    './components/**/*.{vue,js,ts}',
-    './layouts/**/*.{vue,js,ts}',
-    './plugins/**/*.{js,ts}',
-  ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'english': ['SF UI Display', 'sans-serif'],
+        'bengali': ['Hind Siliguri', 'sans-serif'],
+      },
+    },
   },
-  plugins: [],
-};
+  plugins: []
+}

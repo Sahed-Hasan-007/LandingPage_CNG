@@ -1,19 +1,23 @@
-<template>
-    <div>
-        <appHeader/>
-    </div>
-    <div>
-        <Slot />
-    </div>
-    
-</template>
-
-<script>
-import FavoriteDesplay from '~/components/favoriteDesplay.vue';
-
+<script setup lang="ts">
+import Navbar from "~/components/common/Navbar.vue";
+import Footer from "~/components/common/Footer.vue";
 
 </script>
 
-<style lang="scss" scoped>
+<template>
+  <main class="bg-[#fbfbfb] ">
+    <div>
+      <Navbar/>
+    </div>
+    <main class="overflow-x-hidden">
+      <slot ></slot>
+    </main>
+    <div>
+      <Footer/>
+    </div>
+  </main>
+</template>
+
+<style scoped>
 
 </style>

@@ -1,0 +1,289 @@
+{
+  "hello": "Hello, {name}!",
+  "language": "Language",
+  "heroTitle": "Entrepreneurs",
+  "heroSubtitle": "One Business at a Time.",
+  "heroTextOne": "Transforming",
+  "heroTextTwo": "Enrolled Members",
+  "heroTextThree": "Trusted by Thousands of\nEntrepreneurs",
+  "heroButtonText": "Join Now",
+  "silverCounterOne": "15k+",
+  "silverCounterOneText": "Silver Member",
+  "silverCounterTwo": "200+",
+  "silverCounterTwoText": "Success Stories",
+  "goldCounter": "1k+",
+  "goldCounterText": "Successful Business",
+  "footerText": "Online Tech Academy (OTA) empowers entrepreneurs to achieve financial freedom with actionable strategies, innovative tools, and lifelong mentorship—turning dreams into thriving businesses.",
+  "footerAddress": "SAR Bhaban, Pragati Sarani Main Road, Dhaka 1229, Dhaka, Bangladesh",
+  "footerAddressPartOne": "SAR Bhaban, Pragati Sarani Main Road, Dhaka",
+  "footerAddressPartTwo": "1229, Dhaka, Bangladesh",
+  "empoweringTextOne": "Online Tech Academy (OTA) is a leading e-learning platform dedicated to empowering individuals to achieve financial independence through online business.",
+  "empoweringTextTwo": "Established in 2017, OTA has become a trusted name for aspiring and experienced entrepreneurs seeking to build and scale their businesses in the digital age.",
+  "empoweringTextFour": "Our vision is to create 1,000+ successful businesses by 2030 while fostering innovation and reducing unemployment",
+  "empoweringTextThreePartOne": "At ",
+  "empoweringTextThreePartTwo": ", our mission is simple yet ambitious: to help people achieve financial independence through",
+  "empoweringTextThreePartThree": "By providing access to actionable education, mentorship, and support, we aim to create a world where anyone can launch and scale a ",
+  "empoweringTextThreePartFour": "",
+  "empoweringHighlightThreeTextOne": "OTA",
+  "empoweringHighlightThreeTextTwo": "entrepreneurship.",
+  "empoweringHighlightThreeTextThree": "",
+  "empoweringHighlightThreeTextFour": "successful online business.",
+  "hero": {
+    "heading": "Empowering Entrepreneurs, Building Legacies",
+    "subHeading": "One business at a time, turning ideas into success with the right strategies, tools, and lifelong mentorship."
+  },
+  "success": {
+    "heading": "Silver Membership Program",
+    "subHeading": "Your Journey to Success Starts Here",
+    "text": "Our flagship program gives you the tools, resources, and step-by-step guidance to start your business in just 7 days. Learn everything from niche selection and product sourcing to advanced sales strategies.",
+    "data": [
+      {
+        "title": "Lifetime Access to Updated Modules",
+        "description": "Stay ahead of the curve with content designed to grow as your business grows.",
+        "icon": "/images/journeyToSuccess/icon1.svg"
+      },
+      {
+        "title": "Weekly Live Classes and Expert Webinars",
+        "description": "Get hands-on learning and real-time advice from industry leaders.",
+        "icon": "/images/journeyToSuccess/icon2.svg"
+      },
+      {
+        "title": "Hands-On Support From Industry Experts",
+        "description": "Our team is here to guide you through every challenge, every step of the way.",
+        "icon": "/images/journeyToSuccess/icon3.svg"
+      }
+    ]
+  },
+  "sectionFour": {
+    "heading": "Your Journey to Success Starts Here",
+    "flagship_description": "Our flagship program gives you the tools, resources, and step-by-step guidance to start your business in just 7 days. Learn everything from niche selection and product sourcing to advanced sales strategies.",
+    "feature1Text": "Stay ahead of the curve with content designed to grow as your business grows.",
+    "feature2Text": "Get hands-on learning and real-time advice from industry leaders.",
+    "feature3Text": "Our team is here to guide you through every challenge, every step of the way."
+  },
+  "story": {
+    "headingOne": "Real Stories From",
+    "headingTwo": "Real Entrepreneurs",
+    "description": "Real people who trusted OTA to guide them on their entrepreneurial journey. From starting their first business to achieving financial freedom, their stories prove that success is possible for everyone."
+  },
+  "visionary": {
+    "textOnePartOne": "A seasoned digital entrepreneur with over",
+    "highlightExperienceName": "12 years of experience, Mojtahidul Islam",
+    "textOnePartTwo": "has transformed how aspiring business owners achieve financial freedom. Starting his journey in",
+    "highlightFreelancing": "freelancing in 2012,",
+    "textOnePartThree": "Mojtahidul gained expertise in digital marketing and business development, paving the way for success in the",
+    "highlightDigital": "digital space",
+    "textOnePartFour": ".",
+    "highlightYear": "In 2017",
+    "textTwoPartOne": ", he founded",
+    "highlightCompanyName": "Online Tech Academy",
+    "textTwoPartTwo": ", turning his passion for helping others into a thriving movement. With a track record of building five successful e-commerce businesses and mentoring over",
+    "highlightEntrepreneurs": "15,000 entrepreneurs",
+    "textTwoPartThree": ", Mojtahidul is dedicated to fostering a new era of",
+    "highlightEntrepreneurship": "entrepreneurship",
+    "coma": ".",
+    "textThreePartOne": "His",
+    "highlightInnovative": "innovative strategies and mentorship",
+    "textThreePartTwo": "have turned dreams into reality, proving that financial independence is achievable for anyone willing to learn and take action."
+  },
+  "journey": {
+    "heading": "Start Your Journey",
+    "subHeading": "With Free Tools and Content",
+    "text": "Get access to expert insights, actionable resources, and step-by-step guides to kickstart your online business journey—all for free!",
+    "subHeadingOne": "Get access to expert insights, actionable resources, and step-by-step guides to",
+    "subHeadingTwo": "kickstart your online business journey—all for free!",
+    "data": [
+      {
+        "title": "How to Start Business",
+        "description": "Learn the basics of starting your online business from scratch with our easy-to-follow video series. Get actionable tips to launch with confidence!",
+        "videoUrl": "https://www.youtube.com/embed/1nTsLDGFDd0?si=_w4PNJP58p4VuNa1&autoplay=0",
+        "overlay": "/images/journey/thum1.jpg",
+        "link": "https://edu.onlinetechacademy.com/courses/How-To-Start-An-Online-Business-5ec261a80cf248ccb19bfd6a"
+      },
+      {
+        "title": "0 to 1 lakh | Day 1",
+        "description": "Discover industry-tested strategies to earn your first lakh online. Start small, scale smart, and turn ideas into profit.",
+        "videoUrl": "https://www.youtube.com/embed/Du7gDTpbM8k?si=jJ4bTiJrN414QR94&autoplay=0",
+        "overlay": "/images/journey/thum2.png",
+        "link": "https://youtube.com/playlist?list=PLbFAykk0nOVxrw9T__sj_QBg6FmYLPB6m&si=K33k7TxB--pU0tyv"
+      },
+      {
+        "title": "0 to 50 lakh | Part 1",
+        "description": "Learn how to scale your business to generate 50 lakh in revenue. This detailed series is packed with expert guidance and proven methods.",
+        "videoUrl": "https://www.youtube.com/embed/NBWGw22KAzA?si=_b1N02Gp5xGCEyJ6&autoplay=0",
+        "overlay": "/images/journey/thum3.png",
+        "link": "https://youtube.com/playlist?list=PLbFAykk0nOVz45bspSFoanLa0lVL1KzeX&si=OTxnNQt98om3QG4C"
+      }
+    ]
+  },
+  "faq": {
+    "data": [
+      {
+        "id": 1,
+        "question": "What does actually Online Tech Academy do?",
+        "answer": "We're helping Growth Stage Entrepreneurs to get their Freedom of Life by providing True & Proven Guidelines.",
+        "isOpen": false
+      },
+      {
+        "id": 2,
+        "question": "Can I be a member of your team?",
+        "answer": "Yes, you can join the team by following our recruitment process.",
+        "isOpen": false
+      },
+      {
+        "id": 3,
+        "question": "Is Online Tech Academy a Marketing or Consultancy Agency?",
+        "answer": "Online Tech Academy provides consultancy and support for marketing your business effectively.",
+        "isOpen": false
+      },
+      {
+        "id": 4,
+        "question": "Does OTA have any courses?",
+        "answer": "Yes, we offer several courses for entrepreneurs and business owners.",
+        "isOpen": false
+      },
+      {
+        "id": 5,
+        "question": "What guarantees or results do you offer?",
+        "answer": "We ensure proven methods to grow your business effectively.",
+        "isOpen": false
+      }
+    ]
+  },
+  "network": {
+    "subHeadingPartOne": "Be part of a dynamic community of",
+    "subHeadingHighlightText": "15,000+ entrepreneurs",
+    "subHeadingPartTwo": "who are reshaping their futures. Connect, collaborate, and grow together.",
+    "text": " Our networking meetups are designed to inspire and empower. From exclusive Gold Member events to large-scale gatherings, every OTA meetup is an opportunity to learn from industry leaders, share insights, and expand your network. Whether you're looking for guidance or collaboration, you'll find it here."
+  },
+  "discover": {
+    "text": "Our team is dedicated to fostering innovation, collaboration, and the success of every member in our community.",
+    "footerHeading": "Build Your Future With Us",
+    "footerText": "Join a passionate team dedicated to shaping the future of entrepreneurship. At OTA, we believe in creating opportunities, driving innovation, and fostering a collaborative culture. Together, we’re making an impact—one business at a time."
+  },
+  "otaWork": {
+    "heading": "Whom we work with!",
+    "subHeading": "At OTA, we're here to guide dreamers, doers, and achievers. Whether you're just starting out or looking to scale your business, our programs are built to meet you where you are and take you where you want to go.",
+    "textOneHeading": "Aspiring entrepreneurs: ",
+    "textOne": " Looking for a step-by-step guide to launching their online businesses.",
+    "textTwoHeading": "Existing business owners: ",
+    "textTwo": "Seeking strategies to scale and grow profitably.",
+    "textThreeHeading": "Those who want financial freedom: ",
+    "textThree": "They seek independence through online entrepreneurship."
+  },
+  "Support": {
+    "heading": "Why OTA is the Best Support System?",
+    "subHeading": "Practical Guidance, Lifelong Support!",
+    "text": "At OTA, we combine practical education with ongoing mentorship, ensuring every entrepreneur has the tools and support to succeed.",
+    "heading2": "Practical Guidance, Lifelong Support!",
+    "description": "At OTA, we combine practical education with",
+    "description12": "ongoing mentorship, ensuring every entrepreneur",
+    "description13": "has the tools and support",
+    "description14": "to succeed.",
+    "selection1": "Master the basics domains, hosting, ad accounts and more made simple.",
+    "section2": " Learn how to create engaging content and design a seamless customer journey.",
+    "section3": " Run advanced ad campaigns and build a loyal customer base that grows with you.",
+    "section4": " Automate your processes and achieve consistent monthly growth with ease."
+  },
+  "supportForMobile": {
+    "data": [
+      {
+        "heading": "Technical Setup",
+        "text": "Master the basics domains, hosting, ad accounts and more made simple.",
+        "count": "1"
+      },
+      {
+        "heading": "Content Strategy",
+        "text": "Learn how to create engaging content and design a seamless customer journey.",
+        "count": "2"
+      },
+      {
+        "heading": "Marketing and Sales",
+        "text": "Master the basics domains, hosting, ad accounts and more made simple.",
+        "count": "3"
+      },
+      {
+        "heading": "Scaling and Automation",
+        "text": "Master the basics domains, hosting, ad accounts and more made simple.",
+        "count": "4"
+      }
+    ]
+  },
+  "contactText": "Have questions? We’re here to help. Let’s connect and take the first step toward your entrepreneurial journey.",
+  "privacyPolicy": {
+    "heading": "Privacy Policy",
+    "textPartOne": "At",
+    "textPartTwo": "we value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and protect your data when you visit our website or use our services.",
+    "highlightText": "Online Tech Academy (OTA)",
+    "partOneHeading": "Information We Collect",
+    "partOneTextOne": "Personal Information: Name, email, phone number, payment details (for paid services).",
+    "partOneTextTwo": "Non-Personal Information: Browser type, device information, and website usage analytics.",
+    "partOneTextThree": "Community Interactions: Comments, forum posts, and engagement in OTA events.",
+    "partTwoHeading": "How We Use Your Information",
+    "partTwoTextOne": "To provide and improve our services.",
+    "partTwoTextTwo": "To send updates, newsletters, and promotional offers (only with user consent).",
+    "partTwoTextThree": "To enhance customer support and respond to inquiries.",
+    "partTwoTextFour": "To maintain security and prevent fraudulent activities.",
+    "partThreeHeading": "Data Protection & Security",
+    "partThreeTextOne": "OTA ensures strong security measures to protect user data from unauthorized access.",
+    "partThreeTextTwo": "Payment details are encrypted and handled securely through third-party payment providers.",
+    "partThreeTextThree": "Users can request data deletion or modification by contacting support.",
+    "partFourHeading": "Sharing Your Information",
+    "partFourTextOne": "We do not sell or trade user data.",
+    "partFourTextTwo": "Information may be shared with trusted third-party service providers only for essential services (e.g., payment processing, analytics).",
+    "partFourTextThree": "Legal requirements may require us to disclose information when necessary.",
+    "partFiveHeading": "Cookies & Tracking Technologies",
+    "partFiveTextOne": "OTA uses cookies to improve user experience and analyze website traffic.",
+    "partFiveTextTwo": "Users can manage cookie preferences through their browser settings.",
+    "partSixHeading": "Your Rights & Control Over Data",
+    "partSixTextOne": "Users can opt out of promotional communications.",
+    "partSixTextTwo": "Request access to personal data or ask for modifications or deletion.",
+    "partSixTextThree": "Disable cookies via browser settings for enhanced privacy.",
+    "partSevenHeading": "Policy Updates",
+    "partSevenTextOne": "OTA may update this Privacy Policy as needed.",
+    "partSevenTextTwo": "Continued use of our platform after changes means acceptance of the new terms.",
+    "partEightHeading": "Contact Us",
+    "partEightTextOne": "For any questions regarding this policy, contact us at"
+  },
+  "termsAndCondition": {
+    "heading": "Terms and Conditions",
+    "subHeading": "Introduction",
+    "textPartOne": "Welcome to",
+    "textPartTwo": "By accessing our website and using our services, you agree to comply with the following terms and conditions. If you do not agree with any part of these terms, please do not use our platform.",
+    "highlightText": "Online Tech Academy (OTA).",
+    "partOneHeading": "User Eligibility",
+    "partOneTextOne": "Users must be at least 18 years old or have parental consent to use our services.",
+    "partOneTextTwo": "By signing up, users confirm that the information provided is accurate and up to date.",
+    "partTwoHeading": "Services Provided",
+    "partTwoTextOne": "OTA offers:",
+    "partTwoTextTwo": "Online courses, mentorship programs, and digital resources to help entrepreneurs.",
+    "partTwoTextThree": "Access to software tools and business scaling solutions for paid members.",
+    "partTwoTextFour": "A private community for networking and growth.",
+    "partThreeHeading": "Membership & Payments",
+    "partThreeTextOne": "Some OTA services are free, while others require a paid membership.",
+    "partThreeTextTwo": "Payments are non-refundable unless stated otherwise in a specific program’s refund policy.",
+    "partThreeTextThree": "Unauthorized sharing of membership access is strictly prohibited.",
+    "partFourHeading": "Use of Content",
+    "partFourTextOne": "All materials, including videos, PDFs, and training content, are the property of OTA and are protected under copyright law.",
+    "partFourTextTwo": "Users are not allowed to redistribute, sell, or share OTA content without permission.",
+    "partFiveHeading": "Community Guidelines",
+    "partFiveTextOne": "Respectful and professional behavior is required in all OTA communities.",
+    "partFiveTextTwo": "Spamming, harassment, or any form of misconduct will result in account suspension.",
+    "partFiveTextThree": "OTA reserves the right to remove users who violate community guidelines.",
+    "partSixHeading": "Privacy Policy",
+    "partSixTextOne": "User data is collected and processed as per our privacy policy.",
+    "partSixTextTwo": "OTA does not sell user data to third parties.",
+    "partSevenHeading": "Intellectual Property",
+    "partSevenTextOne": "The OTA brand, logo, and all proprietary content remain the intellectual property of OTA.",
+    "partSevenTextTwo": "Unauthorized use of OTA branding is prohibited.",
+    "partNineHeading": "Disclaimer of Liability",
+    "partNineTextOne": "OTA provides education and tools but does not guarantee financial success.",
+    "partNineTextTwo": "Users are responsible for their business decisions and outcomes.",
+    "partNineTextThree": "",
+    "partTenHeading": "Modifications to Terms",
+    "partTenTextOne": "OTA reserves the right to update these terms at any time.",
+    "partTenTextTwo": "Continued use of the platform after updates means acceptance of new terms.",
+    "partEightHeading": "Contact Us",
+    "partEightTextOne": "For any questions regarding these terms, please contact"
+  }
+}
