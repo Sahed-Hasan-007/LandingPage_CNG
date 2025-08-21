@@ -17,7 +17,7 @@ const { locale } = useI18n();
   <div id="home" class="relative w-full h-[700px] md:h-[950px] lg:h-[900px] xl:h-100vh 2xl:h-100vh  overflow-hidden">
     <!-- Background Video -->
     <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover">
-      <source src="https://ota.sgp1.cdn.digitaloceanspaces.com/videos/bg-video.mov" type="video/mp4"/>
+      <source src="/video/fuelTank.mp4" type="video/mp4"/>
       Your browser does not support the video tag.
     </video>
     <!-- Text Overlay -->
