@@ -42,12 +42,12 @@ const { locale } = useI18n();
           </div>
         </div>
         <div class="mt-10">
-          <p class="text-[36px] font-[500]">CNG Fuels supplies 100% renewable & sustainable Biomethane fuel to HGVs.</p>
-          <p class="text-[20px] font-[500]">Your Trusted Partner for Quality Fuel & Safe LPG Supply</p>
+          <p class="text-[36px] font-[500]">{{ $t('hero.title1') }}</p>
+          <p class="text-[20px] font-[500]">{{ $t('hero.title2') }}</p>
         </div>
         <div class="flex items-center justify-center mt-20">
           <button class="btn liquid shadow-md shadow-white/70">
-            <span>Learn More</span>
+            <span>{{ $t('hero.button') }}</span>
           </button>
         </div>
       </div>

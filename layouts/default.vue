@@ -12,9 +12,9 @@ import Footer from "~/components/common/Footer.vue";
     <main class="overflow-x-hidden">
       <slot ></slot>
     </main>
-    <div>
+    <!-- <div>
       <Footer/>
-    </div>
+    </div> -->
   </main>
 </template>
 
