@@ -17,13 +17,13 @@ const { locale } = useI18n();
   <div id="home" class="relative w-full h-[700px] md:h-[950px] lg:h-[900px] xl:h-100vh 2xl:h-100vh  overflow-hidden">
     <!-- Background Video -->
     <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover">
-      <source src="/video/fuelTank.mp4" type="video/mp4"/>
+      <source src="/video/fuelTank2.mp4" type="video/mp4"/>
       Your browser does not support the video tag.
     </video>
     <!-- Text Overlay -->
     <div>
       <div
-          class="absolute inset-0 flex flex-col items-center justify-center bg-[#0B316E]/60 text-white text-center px-4 md:px-0 md:pt-20 lg:pt-8 xl:pt-0 2xl:pt-20">
+          class="absolute inset-0 flex flex-col items-center justify-center bg-[#0B316E]/20 text-white text-center px-4 md:px-0 md:pt-20 lg:pt-8 xl:pt-0 2xl:pt-20">
 
         <!--        Text Section-->
         <div class="container mx-auto max-w-[1300px] lg:max-w-[1005px] xl:max-w-[1160px] min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px]">
