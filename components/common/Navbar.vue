@@ -1,52 +1,65 @@
 <template>
   <nav
-      :class="`navbar fixed ${navbarPos} z-70 min-w-full flex justify-center max-h-[80px] items-center min-h-[80px] transition-all duration-300`"
-  >
-    <div
-        :class="`${
-        isMenuOpen ? 'rounded-none' : 'rounded-2xl'
-      } transition-all duration-400 flex justify-between items-center backdrop-blur-xl bg-white/90 dark:bg-slate-900/90 border-2 dark:border-slate-700/50 mx-auto max-w-[1300px] lg:max-w-[1005px] xl:max-w-[1160px] min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px] w-[100%] lg:w-[100%] xl:w-[100%] 2xl:w-[100%] shadow-lg shadow-slate-200/20 dark:shadow-slate-900/20 py-5 px-6`"
-    >
-      <div class="w-1/6 min-w-44 cursor-pointer">
+    :class="`navbar fixed ${navbarPos} z-70 min-w-full flex justify-center max-h-[70px] items-center min-h-[70px] transition-all duration-300`">
+    <div :class="`${isMenuOpen ? 'rounded-none' : 'rounded-2xl'
+      } mx-4 transition-all duration-400 flex justify-between items-center 
+      backdrop-blur-xl bg-white/90 dark:bg-slate-900/90 border-2 dark:border-slate-700/50 
+      max-w-[1300px] lg:max-w-[1005px] xl:max-w-[1160px] 
+      min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px] 
+      w-full shadow-lg shadow-slate-200/20 dark:shadow-slate-900/20 
+      py-3 sm:py-4 md:py-5 px-4 sm:px-6`">
+      <!-- Logo -->
+      <div class="w-auto min-w-[120px] sm:min-w-44 cursor-pointer">
         <nuxt-link>
-          <p class="text-[24px] font-[700] flex items-center">
-            <span class="px-3 py-1.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl mr-2 text-[20px] font-bold shadow-lg">XYZ</span>
-            <span class="text-[30px] text-slate-800 dark:text-slate-200">CNG</span>
+          <p class="flex items-center text-lg sm:text-xl md:text-2xl font-[700]">
+            <span
+              class="px-2 sm:px-3 py-1 sm:py-1.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg sm:rounded-xl mr-1 sm:mr-2 text-sm sm:text-[18px] md:text-[20px] font-bold shadow-md sm:shadow-lg">
+              XYZ
+            </span>
+            <span class="text-xl sm:text-2xl md:text-[30px] text-slate-800 dark:text-slate-200">
+              CNG
+            </span>
           </p>
         </nuxt-link>
       </div>
 
-      <div class="menus flex gap-10 px-5">
+      <!-- Desktop Menu -->
+      <div class="menus hidden min-[800px]:flex gap-4 sm:gap-6 md:gap-10 px-3 sm:px-5">
         <div :class="locale === 'bn' ? 'font-HindSiliguri' : 'font-SFUIDisplay'"
-             class="hidden min-[800px]:flex gap-2 items-center">
+          class="flex gap-1 sm:gap-2 items-center text-sm sm:text-base md:text-lg">
           <button v-for="section in sections" :key="section.id" @click="scrollToSection(section.id, section.link)"
-                  :class="isActive === section.id ? activeClass : inActive">{{ section.label }}
+            :class="isActive === section.id ? activeClass : inActive">
+            {{ section.label }}
           </button>
         </div>
 
-        <div class="hidden min-[1100px]:flex items-center space-x-4">
-          <LanguageSelector/>
+        <div class="hidden min-[1100px]:flex items-center space-x-3 sm:space-x-4">
+          <LanguageSelector />
         </div>
       </div>
 
-      <button @click="toggleMenu" class="lg:hidden text-slate-700 dark:text-slate-300 hover:text-blue-600 focus:outline-none transition-colors duration-200">
-        <Icon :name="isMenuOpen ? 'gridicons:cross' : 'ph:list-bold'" class="font-bold" size="28"/>
+      <!-- Mobile Menu Button -->
+      <button @click="toggleMenu"
+        class="lg:hidden text-slate-700 dark:text-slate-300 hover:text-blue-600 focus:outline-none transition-colors duration-200">
+        <Icon :name="isMenuOpen ? 'gridicons:cross' : 'ph:list-bold'" class="font-bold" size="24" />
       </button>
     </div>
   </nav>
 
+  <!-- Slide Menu -->
   <transition name="slide">
     <div v-if="isMenuOpen"
-         class="navslide lg:hidden bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-r border-slate-200 dark:border-slate-700 rounded-r-2xl w-full sm:w-80 z-40 fixed h-screen top-[70px] left-0 right-0 sm:right-9 flex flex-col py-6 md:pt-14 shadow-2xl">
-      <div class="min-[800px]:hidden flex flex-col gap-3 px-6">
+      class="navslide lg:hidden bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-r border-slate-200 dark:border-slate-700 rounded-r-2xl w-full sm:w-72 md:w-80 z-40 fixed h-screen top-[70px] left-0 flex flex-col py-4 sm:py-6 md:pt-14 shadow-xl sm:shadow-2xl">
+      <div class="flex flex-col gap-2 sm:gap-3 px-4 sm:px-6">
         <button v-for="section in sections" :key="section.id" @click="scrollToSection(section.id, section.link)"
-                :class="isActive === section.id ? mobileActiveClass : mobileInActive">{{ section.label }}
+          :class="isActive === section.id ? mobileActiveClass : mobileInActive">
+          {{ section.label }}
         </button>
       </div>
-      <div class="lg:hidden flex flex-col gap-6 p-6 h-full items-start">
-        <LanguageSelector @selectLang="toggleMenu"/>
+      <div class="flex flex-col gap-4 sm:gap-6 p-4 sm:p-6 h-full items-start">
+        <LanguageSelector @selectLang="toggleMenu" />
         <button :class="locale === 'bn' ? 'font-HindSiliguri' : 'font-SFUIDisplay'" @click="scrollToSection('contact')"
-                class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 w-40 text-white px-6 py-3 rounded-xl font-medium transition-all duration-200 whitespace-nowrap shadow-lg hover:shadow-xl transform hover:scale-105">
+          class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 w-32 sm:w-40 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg sm:rounded-xl font-medium transition-all duration-200 whitespace-nowrap shadow-md sm:shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base">
           Start Today
         </button>
       </div>
@@ -55,52 +68,60 @@
 </template>
 
 <script setup>
-import {ref} from "vue";
+import { ref } from "vue";
 import LanguageSelector from "@/components/LanguageSelector.vue";
-import {useI18n} from "vue-i18n";
+import { useI18n } from "vue-i18n";
 
-const {locale} = useI18n();
-const navbarPos = ref('top-0 md:top-10')
+const { locale } = useI18n();
+const navbarPos = ref("top-0 md:top-10");
 const isActive = ref("home");
-let observer = null; 
+let observer = null;
 const sections = ref([
-  {id: "home", label: "Home",link:"/"},
-  {id: "service", label: "Service", link:"/"},
-  {id: "solution", label: "Solution", link:"/"},
-  {id: "team", label: "Team", link:"/"},
-  {id: "contact", label: "Contact Us", link:"/"}
+  { id: "home", label: "Home", link: "/" },
+  { id: "service", label: "Service", link: "/" },
+  { id: "solution", label: "Solution", link: "/" },
+  { id: "team", label: "Team", link: "/" },
+  { id: "contact", label: "Contact Us", link: "/" },
 ]);
 
-const inActive = "nav-link px-4 py-2.5 font-medium rounded-xl text-slate-700 dark:text-slate-300 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 whitespace-nowrap transition-all duration-200 cursor-pointer";
-const activeClass = "px-4 py-2.5 bg-gradient-to-r from-blue-600 to-blue-700 font-medium text-white rounded-xl hover:from-blue-700 hover:to-blue-800 whitespace-nowrap shadow-lg transform scale-105 transition-all duration-200";
+const inActive =
+  "nav-link px-4 py-2.5 font-medium rounded-xl text-slate-700 dark:text-slate-300 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 whitespace-nowrap transition-all duration-200 cursor-pointer";
+const activeClass =
+  "px-4 py-2.5 bg-gradient-to-r from-blue-600 to-blue-700 font-medium text-white rounded-xl hover:from-blue-700 hover:to-blue-800 whitespace-nowrap shadow-lg transform scale-105 transition-all duration-200";
 
-const mobileInActive = "nav-link px-4 py-3 font-medium rounded-xl text-slate-700 dark:text-slate-300 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 whitespace-nowrap transition-all duration-200 cursor-pointer w-full text-left";
-const mobileActiveClass = "px-4 py-3 bg-gradient-to-r from-blue-600 to-blue-700 font-medium text-white rounded-xl whitespace-nowrap shadow-lg w-full text-left";
+const mobileInActive =
+  "nav-link px-4 py-3 font-medium rounded-xl text-slate-700 dark:text-slate-300 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 whitespace-nowrap transition-all duration-200 cursor-pointer w-full text-left";
+const mobileActiveClass =
+  "px-4 py-3 bg-gradient-to-r from-blue-600 to-blue-700 font-medium text-white rounded-xl whitespace-nowrap shadow-lg w-full text-left";
 
 const isMenuOpen = ref(false);
 let isScrolling = false;
 
-const {$gsap} = useNuxtApp();
+const { $gsap } = useNuxtApp();
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
 };
 
-const {activateSection} = useSectionCall();
+const { activateSection } = useSectionCall();
 
-watch(activateSection, () => {
-  globalScrollToSection(activateSection.value)
-}, {deep: true})
+watch(
+  activateSection,
+  () => {
+    globalScrollToSection(activateSection.value);
+  },
+  { deep: true }
+);
 
 const scrollToSection = (id, link) => {
-  if(!isHome.value){
-    if(link) return navigateTo(link);
+  if (!isHome.value) {
+    if (link) return navigateTo(link);
   }
   activateSection.value = null;
   activateSection.value = id;
 };
 const route = useRoute();
-const isHome = computed(() => route.name === 'index');
+const isHome = computed(() => route.name === "index");
 
 const globalScrollToSection = (id) => {
   isScrolling = true;
@@ -111,7 +132,7 @@ const globalScrollToSection = (id) => {
       duration: 2,
       scrollTo: {
         y: section,
-        offsetY: 140
+        offsetY: 140,
       },
       ease: "power2.inOut",
       onComplete: () => {
@@ -125,27 +146,27 @@ const globalScrollToSection = (id) => {
 const handleScroll = () => {
   const scrollY = window.scrollY;
   const threshold = 50; // Adjust this value to control when the margin should disappear
-  
+
   if (scrollY > threshold) {
     // When scrolled past threshold, remove margin and stick to top
-    navbarPos.value = 'top-0';
+    navbarPos.value = "top-0";
   } else {
     // When at top, maintain the initial margin
-    navbarPos.value = 'top-0 md:top-10';
+    navbarPos.value = "top-0 md:top-10";
   }
 };
 
-const observerApi = ()=>{
+const observerApi = () => {
   observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (isScrolling) return;
-          if (entry.isIntersecting) {
-            isActive.value = entry.target.id;
-          }
-        });
-      },
-      {rootMargin: "-150px 0px 0px 0px"} // 150px from the top
+    (entries) => {
+      entries.forEach((entry) => {
+        if (isScrolling) return;
+        if (entry.isIntersecting) {
+          isActive.value = entry.target.id;
+        }
+      });
+    },
+    { rootMargin: "-150px 0px 0px 0px" } // 150px from the top
   );
   sections.value.forEach((section) => {
     const element = document.getElementById(section.id);
@@ -153,13 +174,13 @@ const observerApi = ()=>{
       observer.observe(element);
     }
   });
-}
+};
 
 onMounted(() => {
   observerApi();
-  window.addEventListener('popstate', (event) => {
+  window.addEventListener("popstate", (event) => {
     event.preventDefault();
-    globalScrollToSection('home');
+    globalScrollToSection("home");
   });
   window.addEventListener("scroll", handleScroll);
 });
@@ -170,8 +191,7 @@ watch(isHome, (newVal) => {
       observer.disconnect();
     }
     isActive.value = ""; // Reset active class
-  }
-  else {
+  } else {
     observerApi();
   }
 });
@@ -185,11 +205,13 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-.slide-enter-active, .slide-leave-active {
+.slide-enter-active,
+.slide-leave-active {
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.slide-enter, .slide-leave-to {
+.slide-enter,
+.slide-leave-to {
   transform: translateX(100%);
 }
 

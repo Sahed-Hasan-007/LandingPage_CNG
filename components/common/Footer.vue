@@ -44,7 +44,7 @@ const scrollToSection = (id) => {
     <div class="container mx-auto max-w-[1300px] lg:max-w-[950px] xl:max-w-[1160px] min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px] mt-16 mb-8 md:mt-20 md:mb-20  px-4 md:px-8 lg:px-1 xl:px-0">
       <div class="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-20">
         <div>
-          <img src="/images/logo/logo.png" alt="logo"/>
+        
           <div :class="locale === 'bn' ? 'font-HindSiliguri' : 'font-SFUIDisplay'" class="text-[16px] md:text-[18px] pt-4 font-[400] lg:pr-20">{{ $t('footerText') }}</div>
           <div class="block md:hidden pt-4">
             <h1 :class="locale === 'bn' ? 'font-HindSiliguri' : 'font-SFUIDisplay'" class="text-[#042D7C] font-[700] text-[20px] md:text-[22px] md:pt-4">Address</h1>

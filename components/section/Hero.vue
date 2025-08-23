@@ -30,7 +30,7 @@ const { locale } = useI18n();
       class="absolute inset-0 flex flex-col items-start justify-center bg-[#0B316E]/50 text-white"
     >
       <div
-        class="mx-auto max-w-[1300px] lg:max-w-[1005px] xl:max-w-[1160px] min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px] w-[100%] lg:w-[100%] xl:w-[100%] 2xl:w-[100%]"
+        class="mx-4 md:mx-auto max-w-[1300px] lg:max-w-[1005px] xl:max-w-[1160px] min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px] w-[calc(100%-16px)] sm:w-[calc(100%-32px)] lg:w-[100%] xl:w-[100%] 2xl:w-[100%] py-3 sm:py-4 md:py-5"
       >
         <div class="hero-text-container text-[80px] font-bold flex items-center justify-start">
           <p class="mr-6">FOR A SAFE</p>
