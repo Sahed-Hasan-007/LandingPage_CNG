@@ -113,7 +113,7 @@ onMounted(async () => {
     <div class="container relative mx-auto max-w-[1300px] lg:max-w-[1005px] xl:max-w-[1160px] min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px] mt-4 mb-8 lg:mt-8 lg:mb-24 px-4 md:px-8 lg:px-0">
       
       <!-- Section Title on Border -->
-      <div class="absolute -top-8 left-1/2 -translate-x-1/2 border-2 border-green-500 bg-white px-6 py-3 text-[24px] shadow-lg shadow-black/40 rounded-lg font-bold z-10">
+      <div class="absolute -top-8 left-1/2 -translate-x-1/2 border-2 border-green-500 bg-white px-6 py-3 text-[24px] shadow-lg shadow-white/50 rounded-lg font-bold z-10">
         Our Services
       </div>
 

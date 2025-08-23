@@ -1,4 +1,4 @@
-import {metaInfo} from './metaTag'
+import { metaInfo } from './metaTag'
 
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
@@ -10,22 +10,12 @@ export default defineNuxtConfig({
       viewport: "width=device-width, initial-scale=1",
       title: metaInfo.siteName,
       meta: [
-        {
-          name: "description",
-          content: metaInfo.description,
-        },
-        {
-          name: "description",
-          content: metaInfo.siteDescription,
-        },
-        {property: "og:title", content: metaInfo.siteName},
-        {property: "og:description", content: metaInfo.siteDescription},
-        {property: "og:image", content: ''},
+        { name: "description", content: metaInfo.siteDescription },
+        { property: "og:title", content: metaInfo.siteName },
+        { property: "og:description", content: metaInfo.siteDescription },
+        { property: "og:type", content: "website" },
       ],
-      link: [
-        {rel: "icon", type: "image/x-icon", href: "/favicon.ico"},
-      ],
-    }
+    },
   },
   modules: ['@nuxtjs/tailwindcss', '@nuxt/icon', 'nuxt-marquee'],
   plugins: ['~/plugins/aos.client.ts', '~/plugins/gsap.client.ts'],
