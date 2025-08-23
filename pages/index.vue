@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import Empowering from "~/components/section/Empowering.vue";
+import AboutUs from "~/components/section/AboutUs.vue";
 import Hero from "~/components/section/Hero.vue";
 import Contact from "~/components/section/Contact.vue";
 import Partner from "~/components/section/Partner.vue";
@@ -21,7 +21,7 @@ import Support from "~/components/section/Support.vue";
 <template>
   <div>
     <Hero />
-    <Empowering />
+    <AboutUs />
     <MentorFocus/>
     <Success/>
     <OtaWork/>

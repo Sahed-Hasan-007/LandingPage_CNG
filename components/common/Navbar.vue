@@ -4,14 +4,14 @@
   >
     <div
         :class="`${
-        isMenuOpen ? 'rounded-none' : 'rounded-2xl border border-white'
+        isMenuOpen ? 'rounded-none' : 'rounded-2xl'
       } transition-all duration-400 flex justify-between items-center backdrop-blur-xl bg-white/90 dark:bg-slate-900/90 border-2 dark:border-slate-700/50 mx-auto max-w-[1300px] lg:max-w-[1005px] xl:max-w-[1160px] min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px] w-[100%] lg:w-[100%] xl:w-[100%] 2xl:w-[100%] shadow-lg shadow-slate-200/20 dark:shadow-slate-900/20 py-5 px-6`"
     >
       <div class="w-1/6 min-w-44 cursor-pointer">
         <nuxt-link>
-          <p class="text-[20px] font-[700] flex items-center">
-            <span class="px-3 py-1.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl mr-2 text-sm font-bold shadow-lg">XYZ</span>
-            <span class="text-slate-800 dark:text-slate-200">CNG</span>
+          <p class="text-[24px] font-[700] flex items-center">
+            <span class="px-3 py-1.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl mr-2 text-[20px] font-bold shadow-lg">XYZ</span>
+            <span class="text-[30px] text-slate-800 dark:text-slate-200">CNG</span>
           </p>
         </nuxt-link>
       </div>

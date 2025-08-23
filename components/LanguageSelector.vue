@@ -2,54 +2,110 @@
   <div class="relative w-36">
     <button
       @click="isOpen = !isOpen"
-      class="bg-gray-100 border-2 border-[#113d72] rounded-full px-4 py-[7px] text-[#113d72] flex items-center justify-between w-full transition-all duration-300"
+      :class="[
+        'relative overflow-hidden backdrop-blur-sm border rounded-xl px-4 py-2.5 flex items-center justify-between w-full transition-all duration-300 group',
+        isOpen 
+          ? 'bg-white/90 dark:bg-slate-800/90 border-blue-200 dark:border-blue-600 shadow-lg ring-2 ring-blue-100 dark:ring-blue-900/30' 
+          : 'bg-white/70 dark:bg-slate-800/70 border-slate-200 dark:border-slate-600 hover:bg-white/90 dark:hover:bg-slate-800/90 hover:border-blue-200 dark:hover:border-blue-500 hover:shadow-md'
+      ]"
     >
-      <Icon size="16" :name=selectedLanguage.icon class="mr-2" />
-      <span class="font-bold">{{ selectedLanguage.label }}</span>
+      <!-- Gradient overlay on hover -->
+      <div class="absolute inset-0 bg-gradient-to-r from-blue-50/0 to-blue-100/0 group-hover:from-blue-50/20 group-hover:to-blue-100/10 dark:group-hover:from-blue-900/10 dark:group-hover:to-blue-800/5 transition-all duration-300"></div>
+      
+      <div class="relative flex items-center z-10">
+        <Icon 
+          size="18" 
+          :name="selectedLanguage.icon" 
+          class="mr-2 transition-transform duration-300 group-hover:scale-110" 
+        />
+        <span class="font-semibold text-slate-700 dark:text-slate-200 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">
+          {{ selectedLanguage.label }}
+        </span>
+      </div>
+      
       <Icon
-        size="20"
+        size="18"
         name="mdi:chevron-down"
-        :class="isOpen ? 'rotate-180' : 'rotate-0'"
-        class="transition-transform duration-300 ml-auto"
+        :class="[
+          'transition-all duration-300 ml-2 text-slate-500 dark:text-slate-400',
+          isOpen ? 'rotate-180 text-blue-600 dark:text-blue-400' : 'rotate-0 group-hover:text-blue-600 dark:group-hover:text-blue-400'
+        ]"
       />
     </button>
 
-    <div
-      v-if="isOpen"
-      class="absolute left-0 top-full w-full bg-white border border-[#052151] rounded-md shadow-md mt-2"
+    <!-- Dropdown Menu -->
+    <transition
+      enter-active-class="transition ease-out duration-200"
+      enter-from-class="transform opacity-0 scale-95 translate-y-[-10px]"
+      enter-to-class="transform opacity-100 scale-100 translate-y-0"
+      leave-active-class="transition ease-in duration-150"
+      leave-from-class="transform opacity-100 scale-100 translate-y-0"
+      leave-to-class="transform opacity-0 scale-95 translate-y-[-10px]"
     >
       <div
-        v-for="(lang, index) in languages"
-        :key="index"
-        @click="selectLanguage(lang.value)"
-        class="flex items-center px-4 py-2 cursor-pointer hover:bg-[#1565ce] hover:text-white"
+        v-if="isOpen"
+        class="absolute left-0 top-full w-full z-50 mt-2 origin-top"
       >
-        <Icon :name="lang.icon" class="mr-4" />
-        <span>{{ lang.label }}</span>
+        <div class="bg-white/95 dark:bg-slate-800/95 backdrop-blur-xl border border-slate-200 dark:border-slate-600 rounded-xl shadow-xl ring-1 ring-black/5 dark:ring-white/5 overflow-hidden">
+          <div
+            v-for="(lang, index) in languages"
+            :key="index"
+            @click="selectLanguage(lang.value)"
+            :class="[
+              'relative flex items-center px-4 py-3 cursor-pointer transition-all duration-200 group',
+              selectedLanguage.value === lang.value 
+                ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300' 
+                : 'hover:bg-slate-50 dark:hover:bg-slate-700/50 text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400'
+            ]"
+          >
+            
+            <Icon 
+              :name="lang.icon" 
+              size="20"
+              class="mr-3 transition-transform duration-200 group-hover:scale-110" 
+            />
+            <span class="font-medium">{{ lang.label }}</span>
+            
+            <!-- Check mark for selected item -->
+            <Icon
+              v-if="selectedLanguage.value === lang.value"
+              name="mdi:check"
+              size="16"
+              class="ml-auto text-blue-600 dark:text-blue-400"
+            />
+          </div>
+        </div>
       </div>
-    </div>
+    </transition>
+
+    <!-- Backdrop to close dropdown -->
+    <div
+      v-if="isOpen"
+      @click="isOpen = false"
+      class="fixed inset-0 z-40"
+    ></div>
   </div>
 </template>
 
-<script  setup>
+<script setup>
 import { ref } from "vue";
 import { useI18n } from "vue-i18n";
 
 const { locale } = useI18n();
-const {selectedLang} = useSelectedLang(); //composable
+const { selectedLang } = useSelectedLang(); // composable
 const isOpen = ref(false);
-
-const selectedLanguage = ref(selectedLang.value||{ label: "ENG", value: "en", icon:"flag:us-4x3" });
-const emit = defineEmits(['selectLang'])
+const selectedLanguage = ref(selectedLang.value || { label: "ENG", value: "en", icon: "flag:us-4x3" });
+const emit = defineEmits(['selectLang']);
 
 const languages = [
-  { label: "ENG", value: "en" , icon:"flag:us-4x3" },
-  { label: "বাংলা", value: "bn",icon:"flag-bd-4x3" },
+  { label: "ENG", value: "en", icon: "flag:us-4x3" },
+  { label: "বাংলা", value: "bn", icon: "flag-bd-4x3" },
 ];
 
-watch(selectedLang,()=>{
-selectedLang.value?selectedLanguage.value=selectedLang.value:''; 
-})
+watch(selectedLang, () => {
+  selectedLang.value ? selectedLanguage.value = selectedLang.value : '';
+});
+
 const selectLanguage = (value) => {
   selectedLanguage.value = languages.find((lang) => lang.value === value);
   selectedLang.value = selectedLanguage.value;
@@ -57,4 +113,33 @@ const selectLanguage = (value) => {
   isOpen.value = false;
   emit("selectLang");
 };
+
+// Close dropdown when clicking outside
+onMounted(() => {
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.relative.w-36')) {
+      isOpen.value = false;
+    }
+  });
+});
 </script>
+
+<style scoped>
+/* Custom scrollbar for dropdown if needed */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+</style>
