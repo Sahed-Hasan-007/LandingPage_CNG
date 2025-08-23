@@ -73,10 +73,10 @@ const getIconPath = (iconName) => {
 
 <template>
   <div id="aboutus" ref="sectionRef"
-    class="container relative mx-auto max-w-[1300px] lg:max-w-[1005px] xl:max-w-[1160px] min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px] mt-4 mb-8 lg:mt-8 lg:mb-8 2xl:mt-16 2xl:mb-16 px-4 md:px-8 lg:px-0">
+    class="container relative mx-auto max-w-[1300px] lg:max-w-[1005px] xl:max-w-[1160px] min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px] mt-4 mb-8 lg:mt-8 lg:mb-24 px-4 md:px-8 lg:px-0">
     <!-- Section Title on Border -->
     <div
-      class="absolute -top-16 left-1/2 -translate-x-1/2 border border-black bg-white px-6 py-3 text-[24px] shadow-lg rounded-lg font-bold z-10">
+      class="absolute -top-16 left-1/2 -translate-x-1/2 border-2 border-green-500 bg-white px-6 py-3 text-[24px] shadow-lg shadow-black/40 rounded-lg font-bold z-10">
       About Us
     </div>
 
@@ -108,19 +108,21 @@ const getIconPath = (iconName) => {
         </div>
 
         <!-- Mission & Vision -->
-        <div class="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-xl border-l-4 border-green-500">
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">Our Mission</h3>
-          <p class="text-gray-700">
-            To provide safe, reliable, and affordable fuel and LPG services while contributing to Bangladesh's energy
-            security and economic growth.
-          </p>
+        <div data-aos="fade-up" data-aos-duration="800">
+          <div class="bg-green-50 border-2 border-green-500 p-6 rounded-xl">
+            <h3 class="text-xl font-semibold text-green-700 mb-3">Our Mission</h3>
+            <p class="text-green-500">
+              To provide safe, reliable, and affordable fuel and LPG services while contributing to Bangladesh's energy
+              security and economic growth.
+            </p>
+          </div>
         </div>
 
+
         <!-- Stats -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div data-aos="fade-right" data-aos-duration="800" class="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div v-for="(stat, index) in stats" :key="index"
-            class="text-center p-4 bg-white rounded-lg shadow-md border hover:shadow-lg transition-all duration-300"
-            :class="{ 'animate-fade-in-up': isVisible }" :style="{ animationDelay: `${index * 0.1}s` }">
+            class="text-center p-4 bg-white rounded-lg shadow-md border hover:shadow-lg transition-all duration-300">
             <div class="text-2xl lg:text-3xl font-bold text-green-600">{{ stat.number }}</div>
             <div class="text-sm text-gray-600 mt-1">{{ stat.label }}</div>
           </div>
@@ -128,12 +130,12 @@ const getIconPath = (iconName) => {
       </div>
 
       <!-- Right Content - Image and Features -->
-      <div class="space-y-8" :class="{ 'animate-slide-in-right': isVisible }">
+      <div class="space-y-8">
         <!-- Hero Image -->
         <div data-aos="fade-left" data-aos-duration="800">
           <div class="relative overflow-hidden rounded-2xl shadow-2xl group">
             <img
-              src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              src="/public/images/aboutUs/header_img.jpg"
               alt="Modern fuel station in Bangladesh"
               class="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
@@ -147,7 +149,7 @@ const getIconPath = (iconName) => {
 
 
         <!-- Features Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div data-aos="fade-down" data-aos-duration="800" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div v-for="(feature, index) in features" :key="index"
             class="p-6 rounded-xl border-2 transition-all duration-300 cursor-pointer" :class="{
               'border-green-500 bg-green-50 shadow-lg scale-105': activeFeature === index,

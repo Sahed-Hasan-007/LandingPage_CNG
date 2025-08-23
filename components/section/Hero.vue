@@ -276,6 +276,8 @@ const { locale } = useI18n();
   --p: 100%;
   --t: 0.3s;
   color: #000000;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 

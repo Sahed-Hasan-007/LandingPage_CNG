@@ -1,13 +1,13 @@
 <template>
   <nav
     :class="`navbar fixed ${navbarPos} z-70 min-w-full flex justify-center max-h-[70px] items-center min-h-[70px] transition-all duration-300`">
-    <div :class="`${isMenuOpen ? 'rounded-none' : 'rounded-2xl'
+    <div :class="`${isMenuOpen ? 'rounded-2xl' : 'rounded-2xl'
       } mx-4 transition-all duration-400 flex justify-between items-center 
       backdrop-blur-xl bg-white/90 dark:bg-slate-900/90 border-2 dark:border-slate-700/50 
       max-w-[1300px] lg:max-w-[1005px] xl:max-w-[1160px] 
       min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px] 
       w-full shadow-lg shadow-slate-200/20 dark:shadow-slate-900/20 
-      py-3 sm:py-4 md:py-5 px-4 sm:px-6`">
+      py-4 md:py-5 px-4 sm:px-6`">
       <!-- Logo -->
       <div class="w-auto min-w-[120px] sm:min-w-44 cursor-pointer">
         <nuxt-link>
@@ -58,10 +58,6 @@
       </div>
       <div class="flex flex-col gap-4 sm:gap-6 p-4 sm:p-6 h-full items-start">
         <LanguageSelector @selectLang="toggleMenu" />
-        <button :class="locale === 'bn' ? 'font-HindSiliguri' : 'font-SFUIDisplay'" @click="scrollToSection('contact')"
-          class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 w-32 sm:w-40 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg sm:rounded-xl font-medium transition-all duration-200 whitespace-nowrap shadow-md sm:shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base">
-          Start Today
-        </button>
       </div>
     </div>
   </transition>
@@ -78,7 +74,7 @@ const isActive = ref("home");
 let observer = null;
 const sections = ref([
   { id: "home", label: "Home", link: "/" },
-  { id: "service", label: "Service", link: "/" },
+  { id: "service", label: "Our Service", link: "/" },
   { id: "solution", label: "Solution", link: "/" },
   { id: "team", label: "Team", link: "/" },
   { id: "contact", label: "Contact Us", link: "/" },

@@ -11,8 +11,7 @@ import Network from "~/components/section/Network.vue";
 import Visionary from "~/components/section/Visionary.vue";
 import Discover from "~/components/section/Discover.vue";
 import Story from "~/components/section/Story.vue";
-import MentorFocus from "~/components/section/MentorFocus.vue";
-import Success from "~/components/section/Success.vue";
+import OurServices from "~/components/section/OurServices.vue";
 import OtaWork from "~/components/section/OtaWork.vue";
 import Support from "~/components/section/Support.vue";
 
@@ -22,8 +21,7 @@ import Support from "~/components/section/Support.vue";
   <div>
     <Hero />
     <AboutUs />
-    <MentorFocus/>
-    <Success/>
+    <OurServices/>
     <OtaWork/>
     <Support/>
     <Story/>
