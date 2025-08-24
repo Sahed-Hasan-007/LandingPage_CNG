@@ -22,17 +22,17 @@ import Support from "~/components/section/Support.vue";
     <Hero />
     <AboutUs />
     <OurServices/>
-    <!-- <OtaWork/> -->
-    <!-- <Support/> -->
-    <!-- <Story/> -->
-    <!-- <Visionary /> -->
-    <!-- <Discover/> -->
-    <!-- <Network/> -->
-    <!-- <Journey/> -->
-    <!-- <Faq/> -->
-    <!-- <Review/> -->
-    <!-- <Contact/> -->
-    <!-- <Partner/> -->
+     <OtaWork/>
+<!--     <Support/>-->
+<!--     <Story/>-->
+<!--     <Visionary />-->
+<!--     <Discover/>-->
+<!--     <Network/>-->
+<!--     <Journey/>-->
+<!--     <Faq/>-->
+<!--     <Review/>-->
+<!--     <Contact/>-->
+<!--     <Partner/>-->
   </div>
 </template>
 
