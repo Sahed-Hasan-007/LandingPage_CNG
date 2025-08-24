@@ -12,7 +12,7 @@ import Visionary from "~/components/section/Visionary.vue";
 import Discover from "~/components/section/Discover.vue";
 import Story from "~/components/section/Story.vue";
 import OurServices from "~/components/section/OurServices.vue";
-import OtaWork from "~/components/section/OtaWork.vue";
+import Sustainability from "~/components/section/Sustainability.vue";
 import Support from "~/components/section/Support.vue";
 
 </script>
@@ -22,7 +22,7 @@ import Support from "~/components/section/Support.vue";
     <Hero />
     <AboutUs />
     <OurServices/>
-     <OtaWork/>
+    <Sustainability/>
 <!--     <Support/>-->
 <!--     <Story/>-->
 <!--     <Visionary />-->

@@ -72,7 +72,7 @@ const getIconPath = (iconName) => {
 </script>
 
 <template>
-  <div id="aboutus" ref="sectionRef"
+  <div id="about" ref="sectionRef"
     class="container relative mx-auto max-w-[1300px] lg:max-w-[1005px] xl:max-w-[1160px] min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px] mt-4 mb-16 lg:mt-8 lg:mb-24 px-4 md:px-8 lg:px-0">
     <!-- Section Title on Border -->
     <div

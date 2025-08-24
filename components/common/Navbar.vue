@@ -13,7 +13,7 @@
         <nuxt-link>
           <p class="flex items-center text-lg sm:text-xl md:text-2xl font-[700]">
             <span
-              class="px-2 sm:px-3 py-1 sm:py-1.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg sm:rounded-xl mr-1 sm:mr-2 text-sm sm:text-[18px] md:text-[20px] font-bold shadow-md sm:shadow-lg">
+              class="px-2 sm:px-3 py-1 sm:py-1.5 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg sm:rounded-xl mr-1 sm:mr-2 text-sm sm:text-[18px] md:text-[20px] font-bold shadow-md sm:shadow-lg">
               XYZ
             </span>
             <span class="text-xl sm:text-2xl md:text-[30px] text-slate-800 dark:text-slate-200">
@@ -26,7 +26,7 @@
       <!-- Desktop Menu -->
       <div class="menus hidden min-[800px]:flex gap-4 sm:gap-6 md:gap-10 px-3 sm:px-5">
         <div :class="locale === 'bn' ? 'font-HindSiliguri' : 'font-SFUIDisplay'"
-          class="flex gap-1 sm:gap-2 items-center text-sm sm:text-base md:text-lg">
+          class="flex gap-1 sm:gap-2 items-center text-sm sm:text-base md:text-md">
           <button v-for="section in sections" :key="section.id" @click="scrollToSection(section.id, section.link)"
             :class="isActive === section.id ? activeClass : inActive">
             {{ section.label }}
@@ -40,7 +40,7 @@
 
       <!-- Mobile Menu Button -->
       <button @click="toggleMenu"
-        class="lg:hidden text-slate-700 dark:text-slate-300 hover:text-blue-600 focus:outline-none transition-colors duration-200">
+        class="lg:hidden text-slate-700 dark:text-slate-300 hover:text-green-600 focus:outline-none transition-colors duration-200">
         <Icon :name="isMenuOpen ? 'gridicons:cross' : 'ph:list-bold'" class="font-bold" size="24" />
       </button>
     </div>
@@ -74,21 +74,21 @@ const isActive = ref("home");
 let observer = null;
 const sections = ref([
   { id: "home", label: "Home", link: "/" },
+  { id: "about", label: "About Us", link: "/" },
   { id: "service", label: "Our Service", link: "/" },
-  { id: "solution", label: "Solution", link: "/" },
+  { id: "sustainability", label: "Sustainability", link: "/" },
   { id: "team", label: "Team", link: "/" },
   { id: "contact", label: "Contact Us", link: "/" },
 ]);
 
 const inActive =
-  "nav-link px-4 py-2.5 font-medium rounded-xl text-slate-700 dark:text-slate-300 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 whitespace-nowrap transition-all duration-200 cursor-pointer";
+  "nav-link px-4 py-2 font-medium rounded-xl text-slate-700 dark:text-slate-300 hover:text-green-600 hover:bg-green-50 dark:hover:bg-green-900/20 whitespace-nowrap transition-all duration-200 cursor-pointer";
 const activeClass =
-  "px-4 py-2.5 bg-gradient-to-r from-blue-600 to-blue-700 font-medium text-white rounded-xl hover:from-blue-700 hover:to-blue-800 whitespace-nowrap shadow-lg transform scale-105 transition-all duration-200";
-
+  "px-4 py-2 bg-gradient-to-r from-green-600 to-green-700 font-medium text-white rounded-xl hover:from-green-700 hover:to-green-800 whitespace-nowrap shadow-lg transform scale-105 transition-all duration-200";
 const mobileInActive =
-  "nav-link px-4 py-3 font-medium rounded-xl text-slate-700 dark:text-slate-300 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 whitespace-nowrap transition-all duration-200 cursor-pointer w-full text-left";
+  "nav-link px-4 py-3 font-medium rounded-xl text-slate-700 dark:text-slate-300 hover:text-green-600 hover:bg-green-50 dark:hover:bg-green-900/20 whitespace-nowrap transition-all duration-200 cursor-pointer w-full text-left";
 const mobileActiveClass =
-  "px-4 py-3 bg-gradient-to-r from-blue-600 to-blue-700 font-medium text-white rounded-xl whitespace-nowrap shadow-lg w-full text-left";
+  "px-4 py-3 bg-gradient-to-r from-green-600 to-green-700 font-medium text-white rounded-xl whitespace-nowrap shadow-lg w-full text-left";
 
 const isMenuOpen = ref(false);
 let isScrolling = false;

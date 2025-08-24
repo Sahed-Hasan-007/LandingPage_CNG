@@ -109,7 +109,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div id="aboutus" ref="sectionRef" class="bg-black">
+  <div id="service" ref="sectionRef" class="bg-black">
     <div class="container relative mx-auto max-w-[1300px] lg:max-w-[1005px] xl:max-w-[1160px] min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px] mt-4 pb-16 lg:mt-8 lg:pb-24 px-4 md:px-8 lg:px-0"">
       
       <!-- Section Title on Border -->
