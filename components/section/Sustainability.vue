@@ -118,10 +118,14 @@ watch(activeSlideIndex, () => {
 </script>
 
 <template>
-  <div id="sustainability" class="container mx-auto max-w-[1300px] lg:max-w-[1005px] xl:max-w-[1160px] min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px] my-8 md:my-32 2xl:my-32 px-4 md:px-8 lg:px-0">
+  <div id="sustainability" class="container relative mx-auto max-w-[1300px] lg:max-w-[1005px] xl:max-w-[1160px] min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px] my-8 md:my-32 2xl:my-32 px-4 md:px-8 lg:px-0">
+    <div
+        class="absolute -top-[58px] md:-top-[160px] left-1/2 -translate-x-1/2 border-2 border-green-500 bg-white px-6 py-3 text-[18px] md:text-[24px] shadow-lg shadow-black/40 rounded-lg font-bold z-10">
+      Sustainability
+    </div>
     <div class="max-w-full mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 items-center lg:gap-16">
-        <div class="flex flex-col items-center">
+      <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-16">
+        <div data-aos="fade-up" data-aos-duration="800" class="flex flex-col items-center">
           <swiper
               :effect="'coverflow'"
               :grabCursor="true"
@@ -159,7 +163,7 @@ watch(activeSlideIndex, () => {
             </swiper-slide>
           </swiper>
 
-          <div class="flex gap-4 mt-8 items-center justify-center">
+          <div class="flex gap-4 md:mt-8 items-center justify-center">
             <!-- Prev Button -->
             <button
                 ref="prev"
@@ -189,40 +193,40 @@ watch(activeSlideIndex, () => {
         </div>
 
         <!-- item heading, title, description -->
-        <div class="py-2 md:px-4 lg:px-4 relative overflow-hidden">
+        <div data-aos="fade-down" data-aos-duration="800" class="py-2 md:px-4 lg:px-4 relative overflow-hidden">
           <!-- Content with slide animation -->
           <div
-              class="transition-all duration-300 ease-in-out transform h-[350px]"
-              :class="isTransitioning ? 'opacity-0 translate-x-8' : 'opacity-100 translate-x-0'"
+              class="transition-all duration-300 ease-in-out transform h-[280px] md:h-[350px]"
+              :class="isTransitioning ? 'opacity-0 translate-x-16' : 'opacity-100 translate-x-0'"
           >
             <!-- Heading -->
-            <div class="mb-2">
+            <div class="md:mb-2">
               <span class="text-green-600 text-[18px] md:text-[30px] font-medium tracking-wide">
                 {{ currentItem.heading }}
               </span>
             </div>
 
             <!-- Title -->
-            <h2 class="text-2xl md:text-3xl lg:text-[48px] font-bold text-[#0E3467] mb-6 leading-tight">
+            <h2 class="text-2xl md:text-3xl lg:text-[48px] font-bold text-[#0E3467] mb-3 md:mb-6 leading-tight">
               {{ currentItem.title }}
             </h2>
 
             <!-- Description -->
-            <p class="text-gray-600 text-[18px] md:text-[20px] leading-relaxed">
+            <p class="text-gray-600 text-[16px] md:text-[20px] leading-relaxed">
               {{ currentItem.description }}
             </p>
           </div>
 
           <!-- Progress indicator - Always visible -->
-          <div class="flex items-center justify-center mt-4 space-x-2 relative z-10">
-            <span class="text-lg text-gray-500">
+          <div class="flex items-center justify-center md:mt-4 space-x-2 relative z-10">
+            <span class="text-sm md:text-lg text-gray-500">
               {{ activeSlideIndex + 1 }} / {{ items.length }}
             </span>
             <div class="flex space-x-1">
               <div
                   v-for="(item, index) in items"
                   :key="index"
-                  class="h-2 w-10 rounded-full transition-all duration-300"
+                  class="h-1 md:h-2 w-6 md:w-10 rounded-full transition-all duration-300"
                   :class="index === activeSlideIndex ? 'bg-green-600' : 'bg-gray-300'"
               ></div>
             </div>
