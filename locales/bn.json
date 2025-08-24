@@ -1,37 +1,10 @@
 {
-  "hello": "হ্যালো, {name}!",
-  "language": "ভাষা",
-  "heroTitle": "রিয়েলিটিতে কনভার্ট করুন",
-  "heroSubtitle": "ড্রিম বিজনেস গড়ে তুলুন",
-  "heroTextOne": "স্বপ্নকে",
-  "heroTextTwo": "Enrolled Members",
-  "heroTextThree": "Trusted by Thousands of\nEntrepreneurs",
-  "heroButtonText": "Join Now",
-  "silverCounterOne": "15k+",
-  "silverCounterOneText": "Silver Member",
-  "silverCounterTwo": "200+",
-  "silverCounterTwoText": "Success Stories",
-  "goldCounter": "1k+",
-  "goldCounterText": "Successful Business",
-  "footerText" : "Online Tech Academy (OTA) উদ্যোক্তাদের আর্থিক স্বাধীনতা পেতে সাহায্য করে। কার্যকরী কৌশল, নতুন টুলস এবং মেন্টরশিপ দিয়ে স্বপ্নকে সফল বিজনেসে পরিণত করতে পাশে থাকে।",
-  "footerAddress" : "SAR Bhaban, Pragati Sarani Main Road, Dhaka 1229, Dhaka, Bangladesh",
-  "footerAddressPartOne" : "SAR Bhaban, Pragati Sarani Main Road, Dhaka",
-  "footerAddressPartTwo" : "1229, Dhaka, Bangladesh",
-  "empoweringTextOne": "Online Tech Academy (OTA) একটি শীর্ষস্থানীয় ই-লার্নিং প্ল্যাটফর্ম, যা অনলাইন বিজনেসের মাধ্যমে ব্যক্তিদের আর্থিক স্বাধীনতা অর্জনে সক্ষম করে তুলতে প্রতিশ্রুতিবদ্ধ।",
-  "empoweringTextTwo": "২০১৭ সালে প্রতিষ্ঠিত, OTA ডিজিটাল যুগে বিজনেস গড়ে তোলা এবং সম্প্রসারণে আগ্রহী নবীন ও অভিজ্ঞ উদ্যোক্তাদের জন্য একটি বিশ্বস্ত নাম হয়ে উঠেছে।",
-  "empoweringTextFour": "আমাদের ভিশন হচ্ছে প্রতিটি বিজনেসকে ইফেক্টিভলি স্কেল আপ করা যেন সেগুলো দেশের ইকোনমিতে একটা পজিটিভ ইমপ্যাক্ট ক্রিয়েট করতে পারে আর বেকারত্ব দূর করে কর্মসংস্থানে একটা বড় ভূমিকা রাখতে পারে।",
-
-  "empoweringTextThreePartOne": "",
-  "empoweringTextThreePartTwo": "-তে, আমাদের লক্ষ্য সহজ কিন্তু উচ্চাকাঙ্ক্ষী:",
-  "empoweringTextThreePartThree": "মাধ্যমে মানুষকে আর্থিক স্বাধীনতা অর্জনে সহায়তা করা। কর্মযোগ্য শিক্ষা, পরামর্শ এবং সহায়তার সুযোগ প্রদান করে, আমরা এমন একটি বিশ্ব গড়তে চাই যেখানে যে কেউ",
-  "empoweringTextThreePartFour": "শুরু ও সম্প্রসারিত করতে পারে।",
-  "empoweringHighlightThreeTextOne": "OTA",
-  "empoweringHighlightThreeTextTwo": "উদ্যোক্তৃত্বের",
-  "empoweringHighlightThreeTextThree": "সফল অনলাইন বিজনেস",
-  "empoweringHighlightThreeTextFour": "",
-
   "hero": {
-    "heading": "উদ্যোক্তাদের জন্য সাফল্যের পথ তৈরি করছে OTA",
+    "heading": "একটি নিরাপদ",
+    "heading1": "বিশ্ব",
+    "heading2": "পরিবেশ",
+    "heading3": "বিকল্প",
+    "heading4": "সবার জন্য!",
     "title1": "বিশ্বস্ত ও পরিবেশবান্ধব জ্বালানির মাধ্যমে চলুন নিরাপদে।",
     "title2": "উন্নত নিরাপত্তা ব্যবস্থা ও পরিচ্ছন্ন জ্বালানির সমন্বয়ে আমাদের আধুনিক সিএনজি ও এলপিজি স্টেশনগুলো আপনার যাত্রাকে করে তোলে নিরাপদ ও পরিবেশবান্ধব।",
     "button": "আরও জানুন"
@@ -265,57 +238,5 @@
 
     "partEightHeading": "যোগাযোগ করুন",
     "partEightTextOne": "এই নীতিমালা সম্পর্কে কোনো প্রশ্ন থাকলে যোগাযোগ করুন"
-  },
-
-  "termsAndCondition": {
-    "heading": "শর্তাবলী ও নীতিমালা",
-    "subHeading": "ভূমিকা",
-    "textPartOne": "",
-    "textPartTwo": "-তে স্বাগতম! আমাদের ওয়েবসাইট এবং পরিষেবাগুলি ব্যবহার করার মাধ্যমে আপনি নিম্নলিখিত শর্তাবলী মেনে চলতে সম্মত হচ্ছেন। যদি কোনো শর্তে আপত্তি থাকে, অনুগ্রহ করে আমাদের প্ল্যাটফর্ম ব্যবহার থেকে বিরত থাকুন।",
-    "highlightText": "Online Tech Academy (OTA)",
-
-    "partOneHeading": "ব্যবহারকারীর যোগ্যতা",
-    "partOneTextOne": "OTA-এর পরিষেবা ব্যবহার করার জন্য কমপক্ষে ১৮ বছর বয়স হতে হবে অথবা পিতামাতার অনুমতি থাকতে হবে।",
-    "partOneTextTwo": "অ্যাকাউন্ট তৈরি করার সময় সঠিক ও আপডেট তথ্য প্রদান করা বাধ্যতামূলক।",
-
-    "partTwoHeading": "আমাদের পরিষেবা",
-    "partTwoTextOne": "OTA নিম্নলিখিত পরিষেবা প্রদান করে:",
-    "partTwoTextTwo": "অনলাইন কোর্স, মেন্টরশিপ, এবং ডিজিটাল রিসোর্স।",
-    "partTwoTextThree": "বিজনেস বৃদ্ধির জন্য সফটওয়্যার টুলস এবং স্ট্র্যাটেজি।",
-    "partTwoTextFour": "উদ্যোক্তাদের জন্য এক্সক্লুসিভ কমিউনিটি ও নেটওয়ার্কিং সুবিধা।",
-
-    "partThreeHeading": "সদস্যপদ এবং পেমেন্ট",
-    "partThreeTextOne": "OTA-র কিছু পরিষেবা বিনামূল্যে পাওয়া যাবে, তবে প্রিমিয়াম পরিষেবা ও সফটওয়্যার ব্যবহারের জন্য পেমেন্ট করতে হবে।",
-    "partThreeTextTwo": "একবার করা পেমেন্ট অফেরতযোগ্য (Non-refundable), যদি না কোনো নির্দিষ্ট প্রোগ্রামে ফেরতের নিয়ম উল্লেখ থাকে।",
-    "partThreeTextThree": "কোনো ব্যবহারকারী তার সদস্যপদ শেয়ার করতে পারবেন না, অন্যথায় অ্যাকাউন্ট সাসপেন্ড করা হতে পারে।",
-
-    "partFourHeading": "কনটেন্ট ব্যবহারের নিয়ম",
-    "partFourTextOne": "OTA-র সমস্ত ট্রেনিং, ভিডিও, ইবুক এবং অন্যান্য উপকরণ কপিরাইট সুরক্ষিত।",
-    "partFourTextTwo": "ব্যবহারকারীরা OTA-এর কনটেন্ট অনুমতি ছাড়া কোনোভাবে শেয়ার, বিক্রয় বা পুনঃপ্রকাশ করতে পারবেন না।",
-
-    "partFiveHeading": "কমিউনিটি গাইডলাইন",
-    "partFiveTextOne": "OTA কমিউনিটিতে সদাচরণ বজায় রাখা বাধ্যতামূলক।",
-    "partFiveTextTwo": "স্প্যামিং, হ্যারাসমেন্ট, বা অশোভন আচরণ নিষিদ্ধ।",
-    "partFiveTextThree": "নিয়ম লঙ্ঘন করলে OTA ব্যবহারকারীর অ্যাকাউন্ট ডিলিট বা সাসপেন্ড করার অধিকার সংরক্ষণ করে।",
-
-    "partSixHeading": "গোপনীয়তা নীতি",
-    "partSixTextOne": "ব্যবহারকারীর তথ্য আমাদের প্রাইভেসি পলিসির অধীনে সংরক্ষিত।",
-    "partSixTextTwo": "OTA কখনো ব্যবহারকারীর ব্যক্তিগত তথ্য তৃতীয় পক্ষের কাছে বিক্রি করে না।",
-
-    "partSevenHeading": "মেধাস্বত্ব",
-    "partSevenTextOne": "OTA-এর ব্র্যান্ড, লোগো এবং সমস্ত কনটেন্ট OTA-এর সম্পত্তি।",
-    "partSevenTextTwo": "OTA-এর নাম বা লোগো অনুমতি ছাড়া ব্যবহার করা যাবে না।",
-
-    "partNineHeading": "দায়িত্ব ও সীমাবদ্ধতা",
-    "partNineTextOne": "OTA শুধুমাত্র শিক্ষা ও ব্যবসায়িক সহায়তা প্রদান করে।",
-    "partNineTextTwo": "কোনো ব্যবহারকারী অর্থনৈতিক সাফল্য অর্জন করবে এমন নিশ্চয়তা OTA দেয় না।",
-    "partNineTextThree": "ব্যবহারকারী নিজ দায়িত্বে ব্যবসায়িক সিদ্ধান্ত গ্রহণ করবেন।",
-
-    "partTenHeading": "শর্তাবলী পরিবর্তন",
-    "partTenTextOne": "OTA যেকোনো সময় এই শর্তাবলী পরিবর্তন করার অধিকার সংরক্ষণ করে।",
-    "partTenTextTwo": "নতুন শর্তাবলী কার্যকর হওয়ার পরে পরিষেবা ব্যবহার চালিয়ে গেলে তা স্বয়ংক্রিয়ভাবে গ্রহণযোগ্য বলে বিবেচিত হবে।",
-
-    "partEightHeading": "যোগাযোগ করুন",
-    "partEightTextOne": "যেকোনো প্রশ্ন বা সহায়তার জন্য যোগাযোগ করুন "
   }
 }

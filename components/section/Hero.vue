@@ -33,12 +33,12 @@ const { locale } = useI18n();
         class="container relative mx-auto max-w-[1300px] lg:max-w-[1005px] xl:max-w-[1160px] min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px] mt-10 mb-8 lg:mt-24 lg:mb-24 px-4 md:px-8 lg:px-0"
       >
         <div class="hero-text-container text-[80px] font-bold flex items-center justify-start">
-          <p class="mr-6">FOR A SAFE</p>
+          <p class="mr-6">{{ $t('hero.heading') }}</p>
           <div class="dropping-texts text-green-500">
-            <div>WORLD</div>
-            <div>ENVIRONMENT</div>
-            <div>ALTERNATIVE</div>
-            <div>EVERYONE!</div>
+            <div>{{ $t('hero.heading1') }}</div>
+            <div>{{ $t('hero.heading2') }}</div>
+            <div>{{ $t('hero.heading3') }}</div>
+            <div>{{ $t('hero.heading4') }}</div>
           </div>
         </div>
         <div class="mt-10 space-y-4">
@@ -46,10 +46,14 @@ const { locale } = useI18n();
           <p class="text-[14px] md:text-[26px] font-[500] text-center md:text-start leading-tight">{{ $t('hero.title2') }}</p>
         </div>
         <div class="flex items-center justify-center mt-20">
-          <button class="btn liquid shadow-md shadow-white/70">
+          <button
+              class="btn liquid shadow-md shadow-white/70"
+              @click="scrollToSection('service')"
+          >
             <span>{{ $t('hero.button') }}</span>
           </button>
         </div>
+
       </div>
     </div>
   </div>
