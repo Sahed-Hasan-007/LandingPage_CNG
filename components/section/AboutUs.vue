@@ -73,10 +73,10 @@ const getIconPath = (iconName) => {
 
 <template>
   <div id="aboutus" ref="sectionRef"
-    class="container relative mx-auto max-w-[1300px] lg:max-w-[1005px] xl:max-w-[1160px] min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px] mt-4 mb-8 lg:mt-8 lg:mb-24 px-4 md:px-8 lg:px-0">
+    class="container relative mx-auto max-w-[1300px] lg:max-w-[1005px] xl:max-w-[1160px] min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px] mt-4 mb-16 lg:mt-8 lg:mb-24 px-4 md:px-8 lg:px-0">
     <!-- Section Title on Border -->
     <div
-      class="absolute -top-16 left-1/2 -translate-x-1/2 border-2 border-green-500 bg-white px-6 py-3 text-[24px] shadow-lg shadow-black/40 rounded-lg font-bold z-10">
+      class="absolute -top-11 md:-top-16 left-1/2 -translate-x-1/2 border-2 border-green-500 bg-white px-6 py-3 text-[18px] md:text-[24px] shadow-lg shadow-black/40 rounded-lg font-bold z-10">
       About Us
     </div>
 
@@ -88,12 +88,12 @@ const getIconPath = (iconName) => {
         <!-- Company Overview -->
         <div data-aos="fade-right" data-aos-duration="800">
           <div class="space-y-6">
-            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
+            <h2 class="text-2xl lg:text-4xl font-bold text-gray-900 leading-tight">
               Leading Fuel & LPG Services in
               <span class="text-green-600">Bangladesh</span>
             </h2>
 
-            <div class="space-y-4 text-gray-600 text-lg leading-relaxed">
+            <div class="space-y-4 text-gray-600 text-sm lg:text-lg leading-relaxed">
               <p>
                 For over 15 years, XYZ Fuel & LPG Services has been Bangladesh's trusted partner in providing reliable,
                 safe, and efficient fuel solutions. From bustling Dhaka to rural communities, we ensure uninterrupted
@@ -109,9 +109,9 @@ const getIconPath = (iconName) => {
 
         <!-- Mission & Vision -->
         <div data-aos="fade-up" data-aos-duration="800">
-          <div class="bg-green-50 border-2 border-green-500 p-6 rounded-xl">
-            <h3 class="text-xl font-semibold text-green-700 mb-3">Our Mission</h3>
-            <p class="text-green-500">
+          <div class="bg-green-50 border-2 border-green-500 p-4 lg:p-6 rounded-xl">
+            <h3 class="text-lg font-semibold text-green-700 mb-3">Our Mission</h3>
+            <p class="text-sm lg:text-lg text-green-500">
               To provide safe, reliable, and affordable fuel and LPG services while contributing to Bangladesh's energy
               security and economic growth.
             </p>

@@ -15,7 +15,7 @@ const services = [
     subtitle: 'Direct to Your Doorstep',
     description: 'Safe and reliable LPG cylinder delivery service across Bangladesh. We ensure timely delivery with proper safety protocols and genuine products.',
     features: ['24/7 Delivery', 'Safety Certified', 'Genuine Products', 'Quick Response'],
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: '/images/ourServices/service1.jpg',
     icon: 'home',
     color: 'from-blue-500 to-cyan-500'
   },
@@ -25,7 +25,7 @@ const services = [
     subtitle: 'Modern Fuel Solutions',
     description: 'State-of-the-art fuel stations providing premium petrol, diesel, and octane with advanced dispensing technology and quality assurance.',
     features: ['Premium Quality', 'Digital Payment', 'Quick Service', 'Clean Facilities'],
-    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: '/images/ourServices/service2.jpg',
     icon: 'fuel',
     color: 'from-green-500 to-emerald-500'
   },
@@ -35,7 +35,7 @@ const services = [
     subtitle: 'Bulk Fuel Solutions',
     description: 'Comprehensive fuel and LPG supply solutions for industries, restaurants, and commercial establishments with flexible payment terms.',
     features: ['Bulk Orders', 'Flexible Terms', 'Dedicated Support', 'Contract Options'],
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: '/images/ourServices/service3.jpg',
     icon: 'building',
     color: 'from-purple-500 to-pink-500'
   },
@@ -45,7 +45,7 @@ const services = [
     subtitle: '24/7 Emergency Support',
     description: 'Round-the-clock emergency fuel and LPG delivery services for urgent requirements with rapid response teams across major cities.',
     features: ['24/7 Available', 'Rapid Response', 'Emergency Hotline', 'Priority Service'],
-    image: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: '/images/ourServices/service4.jpg',
     icon: 'phone',
     color: 'from-red-500 to-orange-500'
   },
@@ -55,7 +55,7 @@ const services = [
     subtitle: 'Equipment Care Services',
     description: 'Professional maintenance and safety inspection services for LPG equipment, pipelines, and storage systems to ensure optimal performance.',
     features: ['Regular Inspection', 'Safety Checks', 'Equipment Care', 'Certified Technicians'],
-    image: 'https://images.unsplash.com/photo-1621905501492-2a20ac2e0f81?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: '/images/ourServices/service5.jpg',
     icon: 'shield',
     color: 'from-yellow-500 to-amber-500'
   },
@@ -65,7 +65,7 @@ const services = [
     subtitle: 'Smart Energy Solutions',
     description: 'Modern digital platform for easy ordering, tracking, and payment with mobile app support and online customer portal.',
     features: ['Mobile App', 'Online Ordering', 'Real-time Tracking', 'Digital Payments'],
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: '/images/ourServices/service6.jpg',
     icon: 'smartphone',
     color: 'from-indigo-500 to-blue-500'
   }
@@ -110,10 +110,10 @@ onMounted(async () => {
 
 <template>
   <div id="aboutus" ref="sectionRef" class="bg-black">
-    <div class="container relative mx-auto max-w-[1300px] lg:max-w-[1005px] xl:max-w-[1160px] min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px] mt-4 mb-8 lg:mt-8 lg:mb-24 px-4 md:px-8 lg:px-0">
+    <div class="container relative mx-auto max-w-[1300px] lg:max-w-[1005px] xl:max-w-[1160px] min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px] mt-4 pb-16 lg:mt-8 lg:pb-24 px-4 md:px-8 lg:px-0"">
       
       <!-- Section Title on Border -->
-      <div class="absolute -top-8 left-1/2 -translate-x-1/2 border-2 border-green-500 bg-white px-6 py-3 text-[24px] shadow-lg shadow-white/50 rounded-lg font-bold z-10">
+      <div class="absolute -top-7 md:-top-8 left-1/2 -translate-x-1/2 border-2 border-green-500 bg-white px-6 py-3 text-[18px] md:text-[24px] shadow-lg shadow-white/50 rounded-lg font-bold z-10">
         Our Services
       </div>
 
@@ -122,16 +122,16 @@ onMounted(async () => {
         
         <!-- Hero Text -->
         <div 
-          class="text-center mb-16"
+          class="text-center mb-8 lg:mb-16"
           :class="{ 'animate-fade-in-up': isVisible }"
         >
-          <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+          <h2 class="text-2xl lg:text-4xl font-bold text-white mb-3 lg:mb-6">
             Comprehensive Energy Solutions for
             <span class="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
               Modern Bangladesh
             </span>
           </h2>
-          <p class="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
+          <p class="text-gray-300 text-sm lg:text-lg max-w-3xl mx-auto leading-relaxed">
             From residential LPG delivery to commercial fuel solutions, we provide reliable, safe, and efficient energy services across Bangladesh with cutting-edge technology and exceptional customer care.
           </p>
         </div>
@@ -143,16 +143,15 @@ onMounted(async () => {
             :key="service.id"
             class="group relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl overflow-hidden border border-gray-700 hover:border-green-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20"
             :class="{ 'animate-slide-in-up': isVisible }"
-            :style="{ animationDelay: `${index * 0.15}s` }"
           >
             <!-- Service Image -->
             <div class="relative h-48 overflow-hidden">
               <img 
                 :src="service.image" 
                 :alt="service.title"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
               />
-              <div :class="`absolute inset-0 bg-gradient-to-t ${service.color} opacity-70 group-hover:opacity-80 transition-opacity duration-300`"></div>
+              <div :class="`absolute inset-0 bg-gradient-to-t ${service.color} opacity-50 group-hover:opacity-70 transition-opacity duration-300`"></div>
               
               <!-- Service Icon -->
               <div class="absolute top-4 left-4 p-3 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg">
@@ -185,82 +184,6 @@ onMounted(async () => {
                   <div class="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
                   <span>{{ feature }}</span>
                 </div>
-              </div>
-
-              <!-- CTA Button -->
-              <button class="w-full mt-4 bg-gradient-to-r from-green-500 to-blue-500 text-white py-2 px-4 rounded-lg font-semibold text-sm hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:translate-y-[-2px] hover:shadow-lg">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Featured Service Spotlight -->
-        <div 
-          class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-3xl p-8 lg:p-12 border border-gray-700"
-          :class="{ 'animate-fade-in-up': isVisible }"
-          style="animation-delay: 1s"
-        >
-          <div class="grid lg:grid-cols-2 gap-12 items-center">
-            
-            <!-- Left Content -->
-            <div class="space-y-6">
-              <div class="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
-                </svg>
-                <span>Most Popular Service</span>
-              </div>
-              
-              <h3 class="text-2xl lg:text-3xl font-bold text-white">
-                24/7 Emergency LPG Delivery
-              </h3>
-              
-              <p class="text-gray-300 text-lg leading-relaxed">
-                Never run out of cooking gas again! Our emergency delivery service ensures you get LPG cylinders delivered to your doorstep within 30 minutes of your call, anywhere in Dhaka and major cities.
-              </p>
-              
-              <div class="grid grid-cols-2 gap-4 text-center">
-                <div class="bg-gray-800 rounded-xl p-4 border border-gray-700">
-                  <div class="text-2xl font-bold text-green-400">30min</div>
-                  <div class="text-xs text-gray-400">Average Delivery</div>
-                </div>
-                <div class="bg-gray-800 rounded-xl p-4 border border-gray-700">
-                  <div class="text-2xl font-bold text-blue-400">24/7</div>
-                  <div class="text-xs text-gray-400">Available Always</div>
-                </div>
-              </div>
-              
-              <div class="flex flex-col sm:flex-row gap-4">
-                <button class="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-xl font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300 shadow-lg hover:shadow-green-500/25">
-                  Order Now: +880-XXXX-XXXX
-                </button>
-                <button class="border-2 border-green-500 text-green-400 px-6 py-3 rounded-xl font-semibold hover:bg-green-500 hover:text-white transition-all duration-300">
-                  Download App
-                </button>
-              </div>
-            </div>
-
-            <!-- Right Image -->
-            <div class="relative">
-              <div class="relative overflow-hidden rounded-2xl shadow-2xl group">
-                <img 
-                  src="https://images.unsplash.com/photo-1621905252472-e4c3ba0fe2c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                  alt="Emergency LPG delivery service" 
-                  class="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-green-600/50 to-transparent"></div>
-              </div>
-              
-              <!-- Floating Stats -->
-              <div class="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-2xl">
-                <div class="text-2xl font-bold text-gray-900">5000+</div>
-                <div class="text-xs text-gray-600">Deliveries/Month</div>
-              </div>
-              
-              <div class="absolute -top-6 -right-6 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-xl p-4 shadow-2xl">
-                <div class="text-2xl font-bold">4.9★</div>
-                <div class="text-xs opacity-90">Customer Rating</div>
               </div>
             </div>
           </div>
