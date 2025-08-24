@@ -18,9 +18,9 @@ const activeSlideIndex = ref<number>(0);
 const totalSlides = ref<number>(0);
 
 const items = [
-  { name: "Health and Safety", url: '/images/otaWork/ota1.png' },
-  { name: "Environment", url: '/images/otaWork/ota2.png' },
-  { name: "Human Rights", url: '/images/otaWork/ota3.png' },
+  { name: "Health and Safety", url: '/images/sustainability/item1.jpg' },
+  { name: "Environment", url: '/images/sustainability/item2.jpg' },
+  { name: "Human Rights", url: '/images/sustainability/item3.jpg' },
   { name: "Ethics", url: '/images/otaWork/ota1.png' },
 ]
 
@@ -85,7 +85,7 @@ watch(activeSlideIndex, () => {
             }" :modules="modules" class="mySwiper">
             <swiper-slide v-for="(item, i) in items" :key="i" class="relative group">
               <div class="w-full md:h-[400px] lg:h-[320px] xl:h-[400px] flex justify-center items-center">
-                <img :src="item.url" class="w-full h-full rounded-lg" alt="image" />
+                <img :src="item.url" class="w-full h-full object-cover rounded-lg" alt="image" />
               </div>
               <h1
                 class="absolute bottom-0 left-0 right-0 text-center bg-[#0E3467] text-white text-xl p-3 rounded-b-lg ">
