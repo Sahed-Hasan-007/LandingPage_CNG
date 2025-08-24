@@ -13,10 +13,10 @@
         <nuxt-link>
           <p class="flex items-center text-lg sm:text-xl md:text-2xl font-[700]">
             <span
-              class="px-2 sm:px-3 py-1 sm:py-1.5 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg sm:rounded-xl mr-1 sm:mr-2 text-sm sm:text-[18px] md:text-[20px] font-bold shadow-md sm:shadow-lg">
+              class="px-2 sm:px-3 py-1 sm:py-1.5 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg sm:rounded-xl mr-1 sm:mr-2 text-sm sm:text-[16px] md:text-[18px] font-bold shadow-md sm:shadow-lg">
               XYZ
             </span>
-            <span class="text-xl sm:text-2xl md:text-[30px] text-slate-800 dark:text-slate-200">
+            <span class="text-[24px] sm:text-2xl md:text-[32px] text-slate-800 dark:text-slate-200">
               CNG
             </span>
           </p>
