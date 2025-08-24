@@ -127,7 +127,7 @@ const scrollToSection = (id) => {
     <div class="px-4 pt-12 pb-8 bg-[#042D7C] ">
     <div class="container mx-auto max-w-[1300px] lg:max-w-[950px] xl:max-w-[1160px] min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px]   px-4 md:px-8 lg:px-1 xl:px-0">
       <div class="flex flex-col justify-center items-center gap-y-4 ">
-        <img src="/images/logo/ssllogo.svg" alt="logo" />
+<!--        <img src="/images/logo/ssllogo.svg" alt="logo" />-->
         <p :class="locale === 'bn' ? 'font-HindSiliguri' : 'font-SFUIDisplay'" class="text-[14px] text-center md:text-[18px] font-[500] text-white">© {{ currentYear }} All Rights Reserved
           by <strong>Online Tech Academy</strong>.</p>
       </div>
