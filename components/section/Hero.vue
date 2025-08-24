@@ -82,7 +82,7 @@ const { locale } = useI18n();
   position: absolute;
   font-weight: 700;
   font-size: 80px;
-  box-shadow: 0px 60px 25px -20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 60px 25px -20px rgba(0, 0, 0, .5);
   white-space: nowrap;
   line-height: 1;
   top: 0;
