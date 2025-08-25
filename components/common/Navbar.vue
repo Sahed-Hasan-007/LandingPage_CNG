@@ -17,7 +17,7 @@
               XYZ
             </span>
             <span class="text-[24px] sm:text-2xl md:text-[32px] text-slate-800 dark:text-slate-200">
-              CNG
+              CNG<span class="text-green-500">&</span>FUEL
             </span>
           </p>
         </nuxt-link>
