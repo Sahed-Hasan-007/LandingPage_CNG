@@ -71,6 +71,11 @@ const services = [
   }
 ]
 
+const getAos = (index) => {
+  const animations = ['fade-right', 'fade-down', 'fade-left']
+  return animations[index % animations.length] // cycle animations
+}
+
 const getIconPath = (iconName) => {
   const icons = {
     home: 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6',
@@ -138,11 +143,12 @@ onMounted(async () => {
 
         <!-- Services Grid -->
         <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
-          <div 
-            v-for="(service, index) in services" 
+          <div
+            v-for="(service, index) in services"
             :key="service.id"
-            class="group relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl overflow-hidden border border-gray-700 hover:border-green-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20"
-            :class="{ 'animate-slide-in-up': isVisible }"
+            class="p-6 rounded-2xl shadow-lg bg-white dark:bg-gray-900"
+            :data-aos="getAos(index)"
+            data-aos-duration="1000"
           >
             <!-- Service Image -->
             <div class="relative h-48 overflow-hidden">
