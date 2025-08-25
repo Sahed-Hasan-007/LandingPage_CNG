@@ -64,21 +64,21 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import LanguageSelector from "@/components/LanguageSelector.vue";
 import { useI18n } from "vue-i18n";
 
-const { locale } = useI18n();
+const { t, locale } = useI18n();
 const navbarPos = ref("top-0 md:top-10");
 const isActive = ref("home");
 let observer = null;
-const sections = ref([
-  { id: "home", label: "Home", link: "/" },
-  { id: "about", label: "About Us", link: "/" },
-  { id: "service", label: "Our Service", link: "/" },
-  { id: "sustainability", label: "Sustainability", link: "/" },
-  { id: "team", label: "Team", link: "/" },
-  { id: "contact", label: "Contact Us", link: "/" },
+
+const sections = computed(() => [
+  { id: "home", label: t("nav.home"), link: "/" },
+  { id: "about", label: t("nav.aboutUs"), link: "/" },
+  { id: "service", label: t("nav.ourService"), link: "/" },
+  { id: "sustainability", label: t("nav.Sustainability"), link: "/" },
+  { id: "contact", label: t("nav.contactUs"), link: "/" },
 ]);
 
 const inActive =

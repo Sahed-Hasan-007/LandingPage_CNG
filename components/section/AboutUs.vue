@@ -77,7 +77,7 @@ const getIconPath = (iconName) => {
     <!-- Section Title on Border -->
     <div
       class="absolute -top-11 md:-top-16 left-1/2 -translate-x-1/2 border-2 border-green-500 bg-white px-6 py-3 text-[18px] md:text-[24px] shadow-lg shadow-black/40 rounded-lg font-bold z-10">
-      About Us
+      {{ $t('nav.aboutUs') }}
     </div>
 
     <!-- Main Content Grid -->

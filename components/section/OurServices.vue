@@ -2,74 +2,104 @@
 import { ref, onMounted, nextTick } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-const { locale } = useI18n()
+const { t, locale } = useI18n()
 
 const isVisible = ref(false)
 const activeService = ref(0)
 const sectionRef = ref(null)
 
-const services = [
+const services = computed(() => [
   {
     id: 1,
-    title: 'Home LPG Delivery',
-    subtitle: 'Direct to Your Doorstep',
-    description: 'Safe and reliable LPG cylinder delivery service across Bangladesh. We ensure timely delivery with proper safety protocols and genuine products.',
-    features: ['24/7 Delivery', 'Safety Certified', 'Genuine Products', 'Quick Response'],
+    title: t('services.id1.title'),
+    subtitle: t('services.id1.subtitle'),
+    description: t('services.id1.description'),
+    features: [
+      t('services.id1.features.feature1'),
+      t('services.id1.features.feature2'),
+      t('services.id1.features.feature3'),
+      t('services.id1.features.feature4')
+    ],
     image: '/images/ourServices/service1.jpg',
     icon: 'home',
     color: 'from-blue-500 to-cyan-500'
   },
   {
     id: 2,
-    title: 'Fuel Station Services',
-    subtitle: 'Modern Fuel Solutions',
-    description: 'State-of-the-art fuel stations providing premium petrol, diesel, and octane with advanced dispensing technology and quality assurance.',
-    features: ['Premium Quality', 'Digital Payment', 'Quick Service', 'Clean Facilities'],
+    title: t('services.id2.title'),
+    subtitle: t('services.id2.subtitle'),
+    description: t('services.id2.description'),
+    features: [
+      t('services.id2.features.feature1'),
+      t('services.id2.features.feature2'),
+      t('services.id2.features.feature3'),
+      t('services.id2.features.feature4')
+    ],
     image: '/images/ourServices/service2.jpg',
     icon: 'fuel',
     color: 'from-green-500 to-emerald-500'
   },
   {
     id: 3,
-    title: 'Commercial Supply',
-    subtitle: 'Bulk Fuel Solutions',
-    description: 'Comprehensive fuel and LPG supply solutions for industries, restaurants, and commercial establishments with flexible payment terms.',
-    features: ['Bulk Orders', 'Flexible Terms', 'Dedicated Support', 'Contract Options'],
+    title: t('services.id3.title'),
+    subtitle: t('services.id3.subtitle'),
+    description: t('services.id3.description'),
+    features: [
+      t('services.id3.features.feature1'),
+      t('services.id3.features.feature2'),
+      t('services.id3.features.feature3'),
+      t('services.id3.features.feature4')
+    ],
     image: '/images/ourServices/service3.jpg',
     icon: 'building',
     color: 'from-purple-500 to-pink-500'
   },
   {
     id: 4,
-    title: 'Emergency Services',
-    subtitle: '24/7 Emergency Support',
-    description: 'Round-the-clock emergency fuel and LPG delivery services for urgent requirements with rapid response teams across major cities.',
-    features: ['24/7 Available', 'Rapid Response', 'Emergency Hotline', 'Priority Service'],
+    title: t('services.id4.title'),
+    subtitle: t('services.id4.subtitle'),
+    description: t('services.id4.description'),
+    features: [
+      t('services.id4.features.feature1'),
+      t('services.id4.features.feature2'),
+      t('services.id4.features.feature3'),
+      t('services.id4.features.feature4')
+    ],
     image: '/images/ourServices/service4.jpg',
     icon: 'phone',
     color: 'from-red-500 to-orange-500'
   },
   {
     id: 5,
-    title: 'Maintenance & Safety',
-    subtitle: 'Equipment Care Services',
-    description: 'Professional maintenance and safety inspection services for LPG equipment, pipelines, and storage systems to ensure optimal performance.',
-    features: ['Regular Inspection', 'Safety Checks', 'Equipment Care', 'Certified Technicians'],
+    title: t('services.id5.title'),
+    subtitle: t('services.id5.subtitle'),
+    description: t('services.id5.description'),
+    features: [
+      t('services.id5.features.feature1'),
+      t('services.id5.features.feature2'),
+      t('services.id5.features.feature3'),
+      t('services.id5.features.feature4')
+    ],
     image: '/images/ourServices/service5.jpg',
     icon: 'shield',
     color: 'from-yellow-500 to-amber-500'
   },
   {
     id: 6,
-    title: 'Digital Services',
-    subtitle: 'Smart Energy Solutions',
-    description: 'Modern digital platform for easy ordering, tracking, and payment with mobile app support and online customer portal.',
-    features: ['Mobile App', 'Online Ordering', 'Real-time Tracking', 'Digital Payments'],
+    title: t('services.id6.title'),
+    subtitle: t('services.id6.subtitle'),
+    description: t('services.id6.description'),
+    features: [
+      t('services.id6.features.feature1'),
+      t('services.id6.features.feature2'),
+      t('services.id6.features.feature3'),
+      t('services.id6.features.feature4')
+    ],
     image: '/images/ourServices/service6.jpg',
     icon: 'smartphone',
     color: 'from-indigo-500 to-blue-500'
   }
-]
+])
 
 const getAos = (index) => {
   const animations = ['fade-right', 'fade-down', 'fade-left']
@@ -119,7 +149,7 @@ onMounted(async () => {
       
       <!-- Section Title on Border -->
       <div class="absolute -top-7 md:-top-8 left-1/2 -translate-x-1/2 border-2 border-green-500 bg-white px-6 py-3 text-[18px] md:text-[24px] shadow-lg shadow-white/50 rounded-lg font-bold z-10">
-        Our Services
+        {{ $t('nav.ourService') }}
       </div>
 
       <!-- Main Content -->
@@ -131,13 +161,13 @@ onMounted(async () => {
           :class="{ 'animate-fade-in-up': isVisible }"
         >
           <h2 class="text-2xl lg:text-4xl font-bold text-white mb-3 lg:mb-6">
-            Comprehensive Energy Solutions for
+            {{ t('services.heading1') }}<br />
             <span class="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
-              Modern Bangladesh
+              {{ t('services.heading2') }}
             </span>
           </h2>
           <p class="text-gray-300 text-sm lg:text-lg max-w-3xl mx-auto leading-relaxed">
-            From residential LPG delivery to commercial fuel solutions, we provide reliable, safe, and efficient energy services across Bangladesh with cutting-edge technology and exceptional customer care.
+            {{ t('services.title') }}
           </p>
         </div>
 
