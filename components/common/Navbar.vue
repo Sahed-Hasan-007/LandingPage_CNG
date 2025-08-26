@@ -24,7 +24,7 @@
       </div>
 
       <!-- Desktop Menu -->
-      <div class="menus hidden min-[800px]:flex gap-4 sm:gap-6 md:gap-10 px-3 sm:px-5">
+      <div class="menus hidden lg:flex gap-4 sm:gap-6 md:gap-10 px-3">
         <div :class="locale === 'bn' ? 'font-HindSiliguri' : 'font-SFUIDisplay'"
           class="flex gap-1 sm:gap-2 items-center text-sm sm:text-base md:text-md">
           <button v-for="section in sections" :key="section.id" @click="scrollToSection(section.id, section.link)"
@@ -33,7 +33,7 @@
           </button>
         </div>
 
-        <div class="hidden min-[1100px]:flex items-center space-x-3 sm:space-x-4">
+        <div class="hidden lg:flex items-center space-x-3 sm:space-x-4">
           <LanguageSelector />
         </div>
       </div>
@@ -78,6 +78,7 @@ const sections = computed(() => [
   { id: "about", label: t("nav.aboutUs"), link: "/" },
   { id: "service", label: t("nav.ourService"), link: "/" },
   { id: "sustainability", label: t("nav.Sustainability"), link: "/" },
+  { id: "speech", label: t("nav.ourSpeech"), link: "/" },
   { id: "contact", label: t("nav.contactUs"), link: "/" },
 ]);
 

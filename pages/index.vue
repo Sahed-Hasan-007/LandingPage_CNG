@@ -3,9 +3,9 @@
 import AboutUs from "~/components/section/AboutUs.vue";
 import Hero from "~/components/section/Hero.vue";
 import Contact from "~/components/section/Contact.vue";
-import Visionary from "~/components/section/Visionary.vue";
 import OurServices from "~/components/section/OurServices.vue";
 import Sustainability from "~/components/section/Sustainability.vue";
+import Speech from "~/components/section/Speech.vue";
 
 
 </script>
@@ -16,8 +16,8 @@ import Sustainability from "~/components/section/Sustainability.vue";
     <AboutUs />
     <OurServices/>
     <Sustainability/>
-<!--     <Visionary />-->
-<!--     <Contact/>-->
+    <Speech/>
+    <Contact/>
   </div>
 </template>
 

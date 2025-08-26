@@ -4,6 +4,7 @@
     "aboutUs": "About Us",
     "ourService": "Our Services",
     "Sustainability": "Sustainability",
+    "ourSpeech": "Our Speech",
     "contactUs": "Contact Us"
   },
   "hero": {
@@ -86,5 +87,20 @@
         "feature4": "Digital Payments"
       }
     }
+  },
+  "speech": {
+    "title": "Managing Director's Speech",
+    "content1": "Respected partners, clients, and well-wishers,",
+    "content2": "On behalf of Energy Hub Bangladesh, I extend my heartfelt greetings to you all. We firmly believe that the true strength of modern industry and commerce lies in uninterrupted energy supply. With this belief, our journey began—and today, we proudly affirm that Energy Hub Bangladesh is not merely a supply company, but a strategic partner dedicated to driving every industry toward sustainable growth.",
+    "content3": "Our vision is to build a robust energy infrastructure for Bangladesh, rooted in integrity, reliability, and advanced technology—an infrastructure that enables our industries to compete on a global scale. Through the reliable supply of LPG, CNG, Diesel, and PRS, we provide not only long-term solutions but also emergency support during critical times.",
+    "content4": "Energy Hub Bangladesh delivers more than just services; we deliver trust, safety, and progress. We are committed to adapting ourselves to the future of energy—an energy ecosystem that is eco-friendly, technologically advanced, and globally aligned.",
+    "content5": "In conclusion, I would like to emphasize—our strength lies in our partners, our pride rests in our reputation, and our vision is to build an energy-secure Bangladesh. Your trust and cooperation remain our greatest inspiration.",
+    "content6": "Thank you.",
+    "sec1-heading": "Our Strength",
+    "sec1-title": "Lies in our partners and strategic relationships",
+    "sec2-heading": "Our Pride",
+    "sec2-title": "Create new scratch file from selection",
+    "sec3-heading": "Our Vision",
+    "sec3-title": "Building an energy-secure Bangladesh"
   }
 }

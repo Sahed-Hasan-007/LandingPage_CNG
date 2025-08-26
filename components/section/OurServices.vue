@@ -145,18 +145,18 @@ onMounted(async () => {
 
 <template>
   <div id="service" ref="sectionRef" class="bg-black">
-    <div class="container relative mx-auto max-w-[1300px] lg:max-w-[1005px] xl:max-w-[1160px] min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px] mt-4 pb-16 lg:mt-8 lg:pb-24 px-4 md:px-8 lg:px-0"">
+    <div class="container relative mx-auto max-w-[1300px] lg:max-w-[1005px] xl:max-w-[1160px] min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px] mt-4 pb-16 lg:mt-8 lg:pb-24 px-4 md:px-8 lg:px-0">
       
       <!-- Section Title on Border -->
       <div class="absolute -top-7 md:-top-8 left-1/2 -translate-x-1/2 border-2 border-green-500 bg-white px-6 py-3 text-[18px] md:text-[24px] shadow-lg shadow-white/50 rounded-lg font-bold z-10">
         {{ $t('nav.ourService') }}
       </div>
 
-      <!-- Main Content -->
+        <!-- Main Content -->
       <div class="pt-16">
-        
+
         <!-- Hero Text -->
-        <div 
+        <div
           class="text-center mb-8 lg:mb-16"
           :class="{ 'animate-fade-in-up': isVisible }"
         >
@@ -182,13 +182,13 @@ onMounted(async () => {
           >
             <!-- Service Image -->
             <div class="relative h-48 overflow-hidden">
-              <img 
-                :src="service.image" 
+              <img
+                :src="service.image"
                 :alt="service.title"
                 class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
               />
               <div :class="`absolute inset-0 bg-gradient-to-t ${service.color} opacity-50 group-hover:opacity-70 transition-opacity duration-300`"></div>
-              
+
               <!-- Service Icon -->
               <div class="absolute top-4 left-4 p-3 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg">
                 <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -205,15 +205,15 @@ onMounted(async () => {
                 </h3>
                 <p class="text-sm text-green-400 font-medium">{{ service.subtitle }}</p>
               </div>
-              
+
               <p class="text-gray-300 text-sm leading-relaxed">
                 {{ service.description }}
               </p>
 
               <!-- Features -->
               <div class="grid grid-cols-2 gap-2">
-                <div 
-                  v-for="feature in service.features" 
+                <div
+                  v-for="feature in service.features"
                   :key="feature"
                   class="flex items-center space-x-2 text-xs text-gray-400"
                 >
