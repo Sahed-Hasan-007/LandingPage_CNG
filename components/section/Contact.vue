@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-const { locale } = useI18n()
+const { t, locale } = useI18n()
 
 const isVisible = ref(false)
 const sectionRef = ref(null)
@@ -26,7 +26,6 @@ onMounted(() => {
 })
 
 const contactInfo = {
-  businessType: "Exporter, Importer, and Supplier Relationship Management",
   address: "Sahid Dhali Super Market, Square Masterbari, Bhaluka, Mymensingh, Bangladesh",
   phone: "01765970502",
   email: "energyhubbdltd@gmail.com",
@@ -34,10 +33,10 @@ const contactInfo = {
 }
 
 const services = [
-  { icon: 'gas-pump', title: 'LPG Supply', description: 'Reliable liquefied petroleum gas solutions' },
-  { icon: 'fuel', title: 'CNG Services', description: 'Compressed natural gas for vehicles' },
-  { icon: 'truck', title: 'Diesel Supply', description: 'High-quality diesel fuel delivery' },
-  { icon: 'wrench', title: 'PRS Solutions', description: 'Pressure reducing station services' }
+  { icon: 'gas-pump', key: 'lpg' },
+  { icon: 'fuel', key: 'cng' },
+  { icon: 'truck', key: 'diesel' },
+  { icon: 'wrench', key: 'prs' }
 ]
 </script>
 
@@ -45,7 +44,7 @@ const services = [
   <div id="sustainability" ref="sectionRef" class="container relative mx-auto max-w-[1300px] lg:max-w-[1005px] xl:max-w-[1160px] min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px] my-8 md:my-32 2xl:my-32 px-4 md:px-8 lg:px-0">
     <div
         class="absolute -top-[58px] md:-top-[160px] left-1/2 -translate-x-1/2 border-2 border-green-500 bg-white px-6 py-3 text-[18px] md:text-[24px] shadow-lg shadow-black/40 rounded-lg font-bold z-10 hover:shadow-xl hover:shadow-green-500/30 transition-all duration-300">
-      {{$t('nav.contactUs')}}
+      {{ $t('nav.contactUs') }}
     </div>
 
     <!-- Main Content -->
@@ -53,10 +52,10 @@ const services = [
       <!-- Header Section -->
       <div class="text-center mb-12 lg:mb-16">
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 leading-tight">
-          Get In Touch With Us
+          {{ $t('contact.title') }}
         </h2>
         <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Ready to power your business with reliable energy solutions? Contact Energy Hub Bangladesh today for expert consultation and premium fuel services.
+          {{ $t('contact.subtitle') }}
         </p>
         <div class="w-24 h-1 bg-gradient-to-r from-green-500 to-blue-500 mx-auto mt-6 rounded-full"></div>
       </div>
@@ -74,15 +73,15 @@ const services = [
                 </svg>
               </div>
               <div>
-                <h3 class="text-2xl font-bold text-gray-800">Energy Hub Bangladesh</h3>
-                <p class="text-green-600 font-semibold">Your Trusted Energy Partner</p>
+                <h3 class="text-2xl font-bold text-gray-800">{{ $t('contact.company.name') }}</h3>
+                <p class="text-green-600 font-semibold">{{ $t('contact.company.tagline') }}</p>
               </div>
             </div>
 
             <div class="space-y-4">
               <div class="bg-blue-50 rounded-lg p-4">
-                <h4 class="font-semibold text-gray-800 mb-2">Business Type / Industry</h4>
-                <p class="text-gray-600 text-sm leading-relaxed">{{ contactInfo.businessType }}</p>
+                <h4 class="font-semibold text-gray-800 mb-2">{{ $t('contact.businessTypeLabel') }}</h4>
+                <p class="text-gray-600 text-sm leading-relaxed">{{ $t('contact.company.businessType') }}</p>
               </div>
             </div>
           </div>
@@ -98,15 +97,15 @@ const services = [
                   </svg>
                 </div>
                 <div class="flex-1">
-                  <h4 class="font-semibold text-gray-800 mb-2">Head Office Address</h4>
-                  <p class="text-gray-600 leading-relaxed">{{ contactInfo.address }}</p>
+                  <h4 class="font-semibold text-gray-800 mb-2">{{ $t('contact.details.address.title') }}</h4>
+                  <p class="text-gray-600 leading-relaxed">{{ locale === 'bn' ? $t('contact.details.address.value') : contactInfo.address }}</p>
                   <a href="https://maps.google.com/?q=Sahid+Dhali+Super+Market,+Square+Masterbari,+Bhaluka,+Mymensingh,+Bangladesh"
                      target="_blank"
                      class="inline-flex items-center mt-3 text-green-600 hover:text-green-700 font-medium transition-colors duration-200">
                     <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                     </svg>
-                    View on Map
+                    {{ $t('contact.details.address.mapLink') }}
                   </a>
                 </div>
               </div>
@@ -121,11 +120,11 @@ const services = [
                   </svg>
                 </div>
                 <div>
-                  <h4 class="font-semibold text-gray-800 mb-1">Phone</h4>
+                  <h4 class="font-semibold text-gray-800 mb-1">{{ $t('contact.details.phone.title') }}</h4>
                   <a :href="`tel:${contactInfo.phone}`" class="text-green-600 hover:text-green-700 font-medium transition-colors duration-200 block mb-1">
                     {{ contactInfo.phone }}
                   </a>
-                  <p class="text-sm text-gray-500">Call us for immediate assistance</p>
+                  <p class="text-sm text-gray-500">{{ $t('contact.details.phone.description') }}</p>
                 </div>
               </div>
             </div>
@@ -139,11 +138,11 @@ const services = [
                   </svg>
                 </div>
                 <div>
-                  <h4 class="font-semibold text-gray-800 mb-1">Email</h4>
+                  <h4 class="font-semibold text-gray-800 mb-1">{{ $t('contact.details.email.title') }}</h4>
                   <a :href="`mailto:${contactInfo.email}`" class="text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200 break-all block mb-1">
                     {{ contactInfo.email }}
                   </a>
-                  <p class="text-sm text-gray-500">Send us your inquiries</p>
+                  <p class="text-sm text-gray-500">{{ $t('contact.details.email.description') }}</p>
                 </div>
               </div>
             </div>
@@ -157,14 +156,14 @@ const services = [
                   </svg>
                 </div>
                 <div>
-                  <h4 class="font-semibold text-gray-800 mb-1">Website</h4>
+                  <h4 class="font-semibold text-gray-800 mb-1">{{ $t('contact.details.website.title') }}</h4>
                   <a :href="`https://${contactInfo.website}`" target="_blank" class="text-purple-600 hover:text-purple-700 font-medium transition-colors duration-200 flex items-center gap-2 mb-1">
                     {{ contactInfo.website }}
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
                     </svg>
                   </a>
-                  <p class="text-sm text-gray-500">Visit our online portal</p>
+                  <p class="text-sm text-gray-500">{{ $t('contact.details.website.description') }}</p>
                 </div>
               </div>
             </div>
@@ -175,8 +174,8 @@ const services = [
       <!-- Services Grid -->
       <div class="mt-16 lg:mt-20">
         <div class="text-center mb-12">
-          <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Our Services</h3>
-          <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive energy solutions tailored to meet your business needs</p>
+          <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">{{ $t('contact.services.title') }}</h3>
+          <p class="text-gray-600 max-w-2xl mx-auto">{{ $t('contact.services.subtitle') }}</p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -193,30 +192,30 @@ const services = [
                 <path v-else d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
               </svg>
             </div>
-            <h4 class="font-bold text-gray-800 mb-2">{{ service.title }}</h4>
-            <p class="text-gray-600 text-sm">{{ service.description }}</p>
+            <h4 class="font-bold text-gray-800 mb-2">{{ $t(`contact.services.items.${service.key}.title`) }}</h4>
+            <p class="text-gray-600 text-sm">{{ $t(`contact.services.items.${service.key}.description`) }}</p>
           </div>
         </div>
       </div>
 
       <!-- Call to Action -->
       <div class="mt-16 text-center bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 border border-green-200">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Ready to Partner With Us?</h3>
+        <h3 class="text-2xl font-bold text-gray-800 mb-4">{{ $t('contact.cta.title') }}</h3>
         <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Join hundreds of satisfied clients who trust Energy Hub Bangladesh for their energy needs. Contact us today for a consultation.
+          {{ $t('contact.cta.subtitle') }}
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a :href="`tel:${contactInfo.phone}`" class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
             </svg>
-            Call Now
+            {{ $t('contact.cta.callNow') }}
           </a>
           <a :href="`mailto:${contactInfo.email}`" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
             </svg>
-            Email Us
+            {{ $t('contact.cta.emailUs') }}
           </a>
         </div>
       </div>

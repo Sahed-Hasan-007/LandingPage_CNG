@@ -50,7 +50,7 @@ onMounted(() => {
             </div>
           </div>
 
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+          <h2 data-aos="fade-up" data-aos-duration="800" class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
             {{ $t('speech.title') }}
           </h2>
 
@@ -65,7 +65,7 @@ onMounted(() => {
             <!-- Profile Header -->
             <div class="flex flex-col lg:flex-row items-center lg:items-start gap-8 mb-10">
               <!-- Profile Image Placeholder -->
-              <div class="flex-shrink-0">
+              <div data-aos="flip-left" data-aos-duration="800" class="flex-shrink-0">
                 <div class="w-32 h-32 lg:w-40 lg:h-40 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center shadow-xl">
                   <div class="w-28 h-28 lg:w-36 lg:h-36 bg-white rounded-full flex items-center justify-center">
                     <svg class="w-16 h-16 lg:w-20 lg:h-20 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
@@ -105,16 +105,16 @@ onMounted(() => {
                   <p class="text-xl lg:text-2xl font-semibold text-green-800 mb-8">
                     {{ $t('speech.content1') }}
                   </p>
-                  <p class="text-gray-700 leading-relaxed text-lg lg:text-xl mb-8">
+                  <p data-aos="flip-right" data-aos-duration="800" class="text-gray-700 leading-relaxed text-lg lg:text-xl mb-8">
                     {{ $t('speech.content2') }}
                   </p>
-                  <p class="text-gray-700 leading-relaxed text-lg lg:text-xl mb-8">
+                  <p data-aos="flip-left" data-aos-duration="800" class="text-gray-700 leading-relaxed text-lg lg:text-xl mb-8">
                     {{ $t('speech.content3') }}
                   </p>
-                  <p class="text-gray-700 leading-relaxed text-lg lg:text-xl mb-8">
+                  <p data-aos="flip-right" data-aos-duration="800" class="text-gray-700 leading-relaxed text-lg lg:text-xl mb-8">
                     {{ $t('speech.content4') }}
                   </p>
-                  <p class="text-gray-700 leading-relaxed text-lg lg:text-xl mb-8">
+                  <p data-aos="flip-left" data-aos-duration="800" class="text-gray-700 leading-relaxed text-lg lg:text-xl mb-8">
                     {{ $t('speech.content5') }}
                   </p>
                   <p class="text-xl lg:text-2xl font-bold text-gray-800 text-center mt-8">
@@ -134,7 +134,7 @@ onMounted(() => {
 
           <!-- Key Highlights Section -->
           <div class="grid md:grid-cols-3 gap-6 mt-12">
-            <div class="bg-gradient-to-br from-green-500/10 to-green-600/10 backdrop-blur-sm rounded-xl border border-green-500/20 p-6 text-center hover:shadow-lg hover:shadow-green-500/20 transition-all duration-300">
+            <div data-aos="zoom-in-up" data-aos-duration="800" class="bg-gradient-to-br from-green-500/10 to-green-600/10 backdrop-blur-sm rounded-xl border border-green-500/20 p-6 text-center hover:shadow-lg hover:shadow-green-500/20 transition-all duration-300">
               <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
@@ -144,7 +144,7 @@ onMounted(() => {
               <p class="text-gray-300 text-sm">{{ $t('speech.sec1-title') }}</p>
             </div>
 
-            <div class="bg-gradient-to-br from-blue-500/10 to-blue-600/10 backdrop-blur-sm rounded-xl border border-blue-500/20 p-6 text-center hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300">
+            <div data-aos="zoom-in-up" data-aos-duration="800" class="bg-gradient-to-br from-blue-500/10 to-blue-600/10 backdrop-blur-sm rounded-xl border border-blue-500/20 p-6 text-center hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300">
               <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
@@ -154,7 +154,7 @@ onMounted(() => {
               <p class="text-gray-300 text-sm">{{ $t('speech.sec2-title') }}</p>
             </div>
 
-            <div class="bg-gradient-to-br from-purple-500/10 to-purple-600/10 backdrop-blur-sm rounded-xl border border-purple-500/20 p-6 text-center hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300">
+            <div data-aos="zoom-in-up" data-aos-duration="800" class="bg-gradient-to-br from-purple-500/10 to-purple-600/10 backdrop-blur-sm rounded-xl border border-purple-500/20 p-6 text-center hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300">
               <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2l.09.02c.8.11 1.49.65 1.91 1.32L16.5 8H20c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V10c0-1.1.9-2 2-2h3.5L10 3.34c.42-.67 1.11-1.21 1.91-1.32L12 2m0 2.5L9.5 8h5L12 4.5z"/>

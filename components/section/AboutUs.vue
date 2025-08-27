@@ -2,34 +2,35 @@
 import { ref, onMounted, nextTick } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-const { locale } = useI18n()
+const { t,locale } = useI18n()
 
 const isVisible = ref(false)
 const activeFeature = ref(0)
 const sectionRef = ref(null)
 
-const features = [
+const features = computed(() => [
   {
     icon: 'truck',
-    title: 'Reliable Delivery',
-    description: '24/7 fuel and LPG delivery services across Bangladesh with our modern fleet'
+    title: t('aboutus.features.item1.title'),
+    description: t('aboutus.features.item1.description')
   },
   {
     icon: 'shield',
-    title: 'Safety First',
-    description: 'Certified safety protocols and quality assurance for all our fuel products'
+    title: t('aboutus.features.item2.title'),
+    description: t('aboutus.features.item2.description')
   },
   {
     icon: 'clock',
-    title: 'Quick Service',
-    description: 'Fast and efficient service with average delivery time under 30 minutes'
+    title: t('aboutus.features.item3.title'),
+    description: t('aboutus.features.item3.description')
   },
   {
     icon: 'users',
-    title: 'Expert Team',
-    description: 'Trained professionals with years of experience in fuel and LPG services'
+    title: t('aboutus.features.item4.title'),
+    description: t('aboutus.features.item4.description')
   }
-]
+])
+
 
 const stats = [
   { number: '15+', label: 'Years Experience' },
@@ -90,19 +91,16 @@ const getIconPath = (iconName) => {
         <div data-aos="fade-right" data-aos-duration="800">
           <div class="space-y-6">
             <h2 class="text-2xl lg:text-4xl font-bold text-gray-900 leading-tight">
-              Leading Fuel & LPG Services in
-              <span class="text-green-600">Bangladesh</span>
+              {{ $t('aboutus.heading1') }}
+              <span class="text-green-600">{{ $t('aboutus.heading2') }}</span>
             </h2>
 
             <div class="space-y-4 text-gray-600 text-sm lg:text-lg leading-relaxed">
               <p>
-                For over 15 years, XYZ Fuel & LPG Services has been Bangladesh's trusted partner in providing reliable,
-                safe, and efficient fuel solutions. From bustling Dhaka to rural communities, we ensure uninterrupted
-                energy supply for homes, businesses, and industries.
+                {{ $t('aboutus.title1') }}
               </p>
               <p>
-                Our commitment to excellence, safety, and customer satisfaction has made us a household name across
-                Bangladesh. We understand the critical importance of energy in daily life and business operations.
+                {{ $t('aboutus.title2') }}
               </p>
             </div>
           </div>
@@ -111,10 +109,9 @@ const getIconPath = (iconName) => {
         <!-- Mission & Vision -->
         <div data-aos="fade-up" data-aos-duration="800">
           <div class="bg-green-50 border-2 border-green-500 p-4 lg:p-6 rounded-xl">
-            <h3 class="text-lg font-semibold text-green-700 mb-3">Our Mission</h3>
+            <h3 class="text-lg font-semibold text-green-700 mb-3">{{ $t('aboutus.missionheading')}}</h3>
             <p class="text-sm lg:text-lg text-green-500">
-              To provide safe, reliable, and affordable fuel and LPG services while contributing to Bangladesh's energy
-              security and economic growth.
+              {{ $t('aboutus.missiontitle')}}
             </p>
           </div>
         </div>
@@ -133,7 +130,7 @@ const getIconPath = (iconName) => {
       <!-- Right Content - Image and Features -->
       <div class="space-y-8">
         <!-- Hero Image -->
-        <div data-aos="fade-left" data-aos-duration="800">
+        <div data-aos="flip-left" data-aos-duration="800">
           <div class="relative overflow-hidden rounded-2xl shadow-2xl group">
             <img
               src="/public/images/aboutUs/header_img.jpg"
@@ -141,8 +138,8 @@ const getIconPath = (iconName) => {
               class="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
               <div class="absolute bottom-6 left-6 text-white">
-                <h4 class="text-xl font-semibold">Modern Infrastructure</h4>
-                <p class="text-sm opacity-90">State-of-the-art facilities across Bangladesh</p>
+                <h4 class="text-xl font-semibold">{{ $t('aboutus.imageheading')}}</h4>
+                <p class="text-sm opacity-90">{{ $t('aboutus.imagetitle')}}</p>
               </div>
             </div>
           </div>

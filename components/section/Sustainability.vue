@@ -9,47 +9,53 @@ import { Keyboard, Pagination, Autoplay, Navigation, EffectCoverflow } from "swi
 import { ref, watch, defineProps, computed } from 'vue';
 import {useI18n} from "vue-i18n";
 
-const { locale } = useI18n();
-const modules = [Keyboard, Navigation, Pagination, EffectCoverflow, Autoplay];
+const { t, locale } = useI18n()
+const modules = [Keyboard, Navigation, Pagination, EffectCoverflow, Autoplay]
 
-const prev = ref<HTMLButtonElement | null>(null);
-const next = ref<HTMLButtonElement | null>(null);
-const activeSlideIndex = ref<number>(0);
-const totalSlides = ref<number>(0);
-const isTransitioning = ref<boolean>(false);
+const prev = ref<HTMLButtonElement | null>(null)
+const next = ref<HTMLButtonElement | null>(null)
+const activeSlideIndex = ref<number>(0)
+const totalSlides = ref<number>(0)
+const isTransitioning = ref<boolean>(false)
 
-const items = [
-  {
-    name: "Health and Safety",
-    url: '/images/sustainability/item1.jpg',
-    heading: "Our Commitment to",
-    title: "Health and Safety Excellence",
-    description: "We prioritize the wellbeing of our customers, employees, and communities through rigorous safety protocols, regular equipment maintenance, and comprehensive training programs. Our CNG and LPG facilities meet the highest international safety standards, ensuring secure fuel dispensing and storage operations."
-  },
-  {
-    name: "Environment",
-    url: '/images/sustainability/item2.jpg',
-    heading: "Protecting Our",
-    title: "Environmental Future",
-    description: "As a leader in clean energy solutions, we're committed to reducing carbon emissions through our CNG and LPG services. Our eco-friendly fuel alternatives help decrease air pollution, support sustainable transportation, and contribute to a greener tomorrow for future generations."
-  },
-  {
-    name: "Human Rights",
-    url: '/images/sustainability/item3.jpg',
-    heading: "Upholding Universal",
-    title: "Human Rights Standards",
-    description: "We believe in fair employment practices, equal opportunities, and respectful treatment for all. Our commitment extends to supporting local communities, ensuring fair wages, providing safe working conditions, and promoting diversity and inclusion across all levels of our organization."
-  },
-  {
-    name: "Ethics",
-    url: '/images/sustainability/item4.jpg',
-    heading: "Operating with",
-    title: "Unwavering Ethics",
-    description: "Transparency, integrity, and accountability guide every aspect of our business operations. We maintain honest relationships with customers, suppliers, and stakeholders while adhering to strict ethical guidelines in pricing, service delivery, and environmental responsibility."
-  },
-]
+const items = computed(() => {
+  // force dependency on locale so translations recompute
+  const currentLocale = locale.value  
 
-const currentItem = computed(() => items[activeSlideIndex.value] || items[0]);
+  return [
+    {
+      name: t('sustainability.item.item1.name'),
+      url: '/images/sustainability/item1.jpg',
+      heading: t('sustainability.item.item1.heading'),
+      title: t('sustainability.item.item1.title'),
+      description: t('sustainability.item.item1.description')
+    },
+    {
+      name: t('sustainability.item.item2.name'),
+      url: '/images/sustainability/item2.jpg',
+      heading: t('sustainability.item.item2.heading'),
+      title: t('sustainability.item.item2.title'),
+      description: t('sustainability.item.item2.description')
+    },
+    {
+      name: t('sustainability.item.item3.name'),
+      url: '/images/sustainability/item3.jpg',
+      heading: t('sustainability.item.item3.heading'),
+      title: t('sustainability.item.item3.title'),
+      description: t('sustainability.item.item3.description')
+    },
+    {
+      name: t('sustainability.item.item4.name'),
+      url: '/images/sustainability/item4.jpg',
+      heading: t('sustainability.item.item4.heading'),
+      title: t('sustainability.item.item4.title'),
+      description: t('sustainability.item.item4.description')
+    }
+  ]
+})
+
+const currentItem = computed(() => items.value[activeSlideIndex.value] || items.value[0])
+
 
 const handPrev = () => {
   if (prev.value) {

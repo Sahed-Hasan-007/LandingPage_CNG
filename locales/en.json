@@ -102,5 +102,118 @@
     "sec2-title": "Create new scratch file from selection",
     "sec3-heading": "Our Vision",
     "sec3-title": "Building an energy-secure Bangladesh"
+  },
+  "aboutus": {
+    "heading1": "Leading Fuel & LPG Services in",
+    "heading2": "Bangladesh",
+    "title1": "For over 15 years, XYZ Fuel & LPG Services has been Bangladesh's trusted partner in providing reliable, safe, and efficient fuel solutions. From bustling Dhaka to rural communities, we ensure uninterrupted energy supply for homes, businesses, and industries.",
+    "title2": "Our commitment to excellence, safety, and customer satisfaction has made us a household name across Bangladesh. We understand the critical importance of energy in daily life and business operations.",
+    "missionheading": "Our Mission",
+    "missiontitle": "To provide safe, reliable, and affordable fuel and LPG services while contributing to Bangladesh's energy security and economic growth.",
+    "imageheading": "Modern Service",
+    "imagetitle": "State-of-the-art facilities across Bangladesh",
+    "features": {
+      "item1": {
+        "title": "Reliable Delivery",
+        "description": "24/7 fuel and LPG delivery services across Bangladesh with our modern fleet."
+      },
+      "item2": {
+        "title": "Safety First",
+        "description": "Certified safety protocols and quality assurance for all our fuel products."
+      },
+      "item3": {
+        "title": "Quick Service",
+        "description": "Fast and efficient service with average delivery time under 30 minutes."
+      },
+      "item4": {
+        "title": "Expert Team",
+        "description": "Trained professionals with years of experience in fuel and LPG services."
+      }
+    }
+  },
+  "sustainability": {
+    "item": {
+      "item1": {
+        "name": "Health and Safety",
+        "heading": "Our Commitment to",
+        "title": "Health and Safety Excellence",
+        "description": "We prioritize the wellbeing of our customers, employees, and communities through rigorous safety protocols, regular equipment maintenance, and comprehensive training programs. Our CNG and LPG facilities meet the highest international safety standards, ensuring secure fuel dispensing and storage operations."
+      },
+      "item2": {
+        "name": "Environment",
+        "heading": "Protecting Our",
+        "title": "Environmental Future",
+        "description": "As a leader in clean energy solutions, we're committed to reducing carbon emissions through our CNG and LPG services. Our eco-friendly fuel alternatives help decrease air pollution, support sustainable transportation, and contribute to a greener tomorrow for future generations."
+      },
+      "item3": {
+        "name": "Human Rights",
+        "heading": "Upholding Universal",
+        "title": "Human Rights Standards",
+        "description": "We believe in fair employment practices, equal opportunities, and respectful treatment for all. Our commitment extends to supporting local communities, ensuring fair wages, providing safe working conditions, and promoting diversity and inclusion across all levels of our organization."
+      },
+      "item4": {
+        "name": "Ethics",
+        "heading": "Operating with",
+        "title": "Unwavering Ethics",
+        "description": "Transparency, integrity, and accountability guide every aspect of our business operations. We maintain honest relationships with customers, suppliers, and stakeholders while adhering to strict ethical guidelines in pricing, service delivery, and environmental responsibility."
+      }
+    }
+  },
+  "contact": {
+    "title": "Get In Touch With Us",
+    "subtitle": "Ready to power your business with reliable energy solutions? Contact Energy Hub Bangladesh today for expert consultation and premium fuel services.",
+    "company": {
+      "name": "Energy Hub Bangladesh",
+      "tagline": "Your Trusted Energy Partner",
+      "businessType": "Exporter, Importer, and Supplier Relationship Management"
+    },
+    "details": {
+      "address": {
+        "title": "Head Office Address",
+        "value": "Sahid Dhali Super Market, Square Masterbari, Bhaluka, Mymensingh, Bangladesh",
+        "mapLink": "View on Map"
+      },
+      "phone": {
+        "title": "Phone",
+        "description": "Call us for immediate assistance"
+      },
+      "email": {
+        "title": "Email",
+        "description": "Send us your inquiries"
+      },
+      "website": {
+        "title": "Website",
+        "description": "Visit our online portal"
+      }
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Comprehensive energy solutions tailored to meet your business needs",
+      "items": {
+        "lpg": {
+          "title": "LPG Supply",
+          "description": "Reliable liquefied petroleum gas solutions"
+        },
+        "cng": {
+          "title": "CNG Services",
+          "description": "Compressed natural gas for vehicles"
+        },
+        "diesel": {
+          "title": "Diesel Supply",
+          "description": "High-quality diesel fuel delivery"
+        },
+        "prs": {
+          "title": "PRS Solutions",
+          "description": "Pressure reducing station services"
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Partner With Us?",
+      "subtitle": "Join hundreds of satisfied clients who trust Energy Hub Bangladesh for their energy needs. Contact us today for a consultation.",
+      "callNow": "Call Now",
+      "emailUs": "Email Us"
+    },
+    "businessTypeLabel": "Business Type / Industry"
   }
 }
