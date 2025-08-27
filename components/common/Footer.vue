@@ -1,139 +1,257 @@
 <script setup lang="ts">
 import Swal from 'sweetalert2';
-import {useI18n} from "vue-i18n";
+import { useI18n } from "vue-i18n";
 
 const { locale } = useI18n();
-const company = [
-  { name: "About Us", link: "", id:"empower" },
-  { name: "Career", link: "", id:"" },
-  { name: "Contact Us", link: "", id:"contact" },
-  { name: "Privacy Policy", link: "/privacy-policy", id:"" },
-  { name: "Terms & Conditions", link: "/terms-and-condition", id:"" },
-]
-const social = [
-  { name: "Facebook", link: "https://www.facebook.com/onlinetechacademy" },
-  { name: "LinkedIn", link: "https://www.linkedin.com/company/online-tech-academy" },
-  { name: "Facebook Group", link: "https://www.facebook.com/groups/digitalbizclub" },
-  // { name: "Twitter", link: "/" },
-  { name: "Youtube", link: "https://www.youtube.com/@mojtahidulislam9095" },
-]
-const currentYear = new Date().getFullYear();
 
-const formData = ref({ email: '' });
-const handleNewsletter = () => {
-  formData.value.email = '';
+// Function to handle newsletter subscription
+const subscribeNewsletter = () => {
   Swal.fire({
+    title: 'Subscribed!',
+    text: 'Thank you for subscribing to our newsletter.',
     icon: 'success',
-    title: 'Email sent successfully!',
-    text: 'Thank you for subscribing.',
-    confirmButtonText: 'Okay',
+    confirmButtonText: 'OK',
+    confirmButtonColor: '#2563eb',
   });
-}
-
-const {activateSection} = useSectionCall();
-
-const scrollToSection = (id) => {
-  activateSection.value = null;
-  activateSection.value = id;
 };
 
+// Function to handle contact form submission
+const submitContact = () => {
+  Swal.fire({
+    title: 'Message Sent!',
+    text: 'We will get back to you shortly.',
+    icon: 'success',
+    confirmButtonText: 'OK',
+    confirmButtonColor: '#2563eb',
+  });
+};
 </script>
 
 <template>
-  <div>
-    <div class="container mx-auto max-w-[1300px] lg:max-w-[950px] xl:max-w-[1160px] min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px] mt-16 mb-8 md:mt-20 md:mb-20  px-4 md:px-8 lg:px-1 xl:px-0">
-      <div class="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-20">
-        <div>
-        
-          <div :class="locale === 'bn' ? 'font-HindSiliguri' : 'font-SFUIDisplay'" class="text-[16px] md:text-[18px] pt-4 font-[400] lg:pr-20">{{ $t('footerText') }}</div>
-          <div class="block md:hidden pt-4">
-            <h1 :class="locale === 'bn' ? 'font-HindSiliguri' : 'font-SFUIDisplay'" class="text-[#042D7C] font-[700] text-[20px] md:text-[22px] md:pt-4">Address</h1>
-            <div :class="locale === 'bn' ? 'font-HindSiliguri' : 'font-SFUIDisplay'" class="text-[16px] md:text-[18px] pt-4 md:pt-2 font-[400]">{{ $t('footerAddress') }}</div>
-          </div>
-        </div>
-        <div class="grid grid-cols-2">
-          <div>
-            <h1 :class="locale === 'bn' ? 'font-HindSiliguri' : 'font-SFUIDisplay'" class="text-[#042D7C] font-[700] text-[20px] md:text-[22px] pt-4 pb-6 md:pb-8">Company</h1>
-            <div v-for="(item, i) in company" class="pb-2">
-              <div v-if="item.id">
-                <nuxt-link  @click="scrollToSection(item.id)" :id="item.id" :class="locale === 'bn' ? 'font-HindSiliguri' : 'font-SFUIDisplay'"
-                           class="text-[16px] md:text-[18px]  font-[500] hover:text-[#EE8122] cursor-pointer transition delay-150 duration-300 ease-in-out">{{
-                    item.name }}</nuxt-link>
+  <div class="bg-gray-900 pt-16 pb-8">
+    <div
+      class="container mx-auto max-w-[1300px] lg:max-w-[950px] xl:max-w-[1160px] min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px] px-4 md:px-8 lg:px-1 xl:px-0">
+      <footer class="footer text-white">
+        <!-- Main Footer Content -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          <!-- Company Info -->
+          <div class="space-y-6">
+            <div class="flex items-center">
+              <div class="bg-blue-600 h-10 w-10 rounded-lg flex items-center justify-center mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
               </div>
-              <div v-else>
-                <nuxt-link :to="item.link"  :class="locale === 'bn' ? 'font-HindSiliguri' : 'font-SFUIDisplay'"
-                           class="text-[16px] md:text-[18px]  font-[500] hover:text-[#EE8122] cursor-pointer transition delay-150 duration-300 ease-in-out">{{
-                    item.name }}</nuxt-link>
-              </div>
+              <h2 class="text-2xl font-bold">XYZ Fuel & LPG</h2>
+            </div>
+            <p class="text-gray-400 leading-relaxed">
+              Providing reliable fuel and LPG solutions across Bangladesh since 2001. Your trusted partner for energy
+              needs.
+            </p>
+            <div class="flex space-x-4 pt-2">
+              <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                </svg>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zm-5.904 9.414L19 7.5l-1.5-1.5-5.902 5.902-2.596-2.597L7.5 10.807l3.096 3.097 1.5-1.5z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
             </div>
           </div>
-          <div>
-            <h1 :class="locale === 'bn' ? 'font-HindSiliguri' : 'font-SFUIDisplay'" class="text-[#042D7C] font-[700] text-[20px] md:text-[22px] pt-4 pb-6 md:pb-8">Social Links</h1>
-            <div v-for="(item, i) in social" class="pb-2">
-              <nuxt-link :to="item.link" target="_blank" :class="locale === 'bn' ? 'font-HindSiliguri' : 'font-SFUIDisplay'"
-                class="text-[16px] md:text-[18px]  font-[500] hover:text-[#EE8122] cursor-pointer transition delay-150 duration-300 ease-in-out">{{
-                  item.name }}</nuxt-link>
-            </div>
+
+          <!-- Quick Links -->
+          <div class="space-y-6">
+            <h3 class="text-lg font-semibold relative inline-block pb-2">
+              Quick Links
+              <span class="absolute bottom-0 left-0 w-12 h-0.5 bg-blue-500"></span>
+            </h3>
+            <ul class="space-y-3">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors duration-300 flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors duration-300 flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors duration-300 flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                  Services
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors duration-300 flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="space-y-6">
+            <h3 class="text-lg font-semibold relative inline-block pb-2">
+              Contact Info
+              <span class="absolute bottom-0 left-0 w-12 h-0.5 bg-blue-500"></span>
+            </h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-3 mt-1" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <span class="text-gray-400">Sahid Dhali Super Market, Square Masterbari, Bhaluka, Mymensingh.</span>
+                </div>
+              </li>
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-3" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span class="text-gray-400">+880 176 5970 502</span>
+              </li>
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-3" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <span class="text-gray-400">energyhubbdltd@gmail.com</span>
+              </li>
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-3" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-gray-400">Open 24/7 (Everyday)</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Newsletter Subscription -->
+          <div class="space-y-6">
+            <h3 class="text-lg font-semibold relative inline-block pb-2">
+              Newsletter
+              <span class="absolute bottom-0 left-0 w-12 h-0.5 bg-blue-500"></span>
+            </h3>
+            <p class="text-gray-400">
+              Subscribe to our newsletter for updates on new services and special offers.
+            </p>
+            <form @submit.prevent="subscribeNewsletter" class="space-y-4">
+              <div>
+                <input type="email" placeholder="Your email address" required
+                  class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300">
+              </div>
+              <button type="submit"
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-300 flex items-center justify-center">
+                Subscribe
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </button>
+            </form>
           </div>
         </div>
-      </div>
-      <div class="grid md:grid-cols-2 gap-12 lg:gap-20">
-        <div class="hidden md:block">
-          <h1 :class="locale === 'bn' ? 'font-HindSiliguri' : 'font-SFUIDisplay'" class="text-[#042D7C] font-[700] md:text-[22px] md:pt-4">Address</h1>
-          <a target="_blank" href="https://www.google.com/maps/place/Online+Tech+Academy/@23.8169125,90.4187499,933m/data=!3m1!1e3!4m10!1m2!2m1!1sSAR+Bhaban,+Pragati+Sarani+Main+Road,+Dhaka+1229,+Dhaka,+Bangladesh!3m6!1s0x3755c7e53743c065:0xb447f66ea66e7d14!8m2!3d23.8168826!4d90.4211728!15sCkNTQVIgQmhhYmFuLCBQcmFnYXRpIFNhcmFuaSBNYWluIFJvYWQsIERoYWthIDEyMjksIERoYWthLCBCYW5nbGFkZXNoWkEiP3NhciBiaGFiYW4gcHJhZ2F0aSBzYXJhbmkgbWFpbiByb2FkIGRoYWthIDEyMjkgZGhha2EgYmFuZ2xhZGVzaJIBD2xlYXJuaW5nX2NlbnRlcuABAA!16s%2Fg%2F11h2g449l5!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDIyNC4wIKXMDSoASAFQAw%3D%3D">
-            <div :class="locale === 'bn' ? 'font-HindSiliguri' : 'font-SFUIDisplay'" class="md:text-[18px] md:pt-2 font-[400]">{{ $t('footerAddressPartOne') }} <br> {{ $t('footerAddressPartTwo') }}</div>
-          </a>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-500 text-sm mb-4 md:mb-0">
+            © 2023 XYZ Fuel & LPG Services. All rights reserved.
+          </p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-500 hover:text-blue-500 text-sm transition-colors duration-300">Privacy
+              Policy</a>
+            <a href="#" class="text-gray-500 hover:text-blue-500 text-sm transition-colors duration-300">Terms of
+              Service</a>
+            <a href="#" class="text-gray-500 hover:text-blue-500 text-sm transition-colors duration-300">Sitemap</a>
+          </div>
         </div>
-        <div>
-          <h1 :class="locale === 'bn' ? 'font-HindSiliguri' : 'font-SFUIDisplay'" class="text-[#042D7C] font-[700] text-[20px] md:text-[22px] pt-6 md:pt-4">Newsletter</h1>
-          <form @submit.prevent="handleNewsletter" class="flex items-center gap-x-4 pt-4 md:pt-4">
-            <div :class="locale === 'bn' ? 'font-HindSiliguri' : 'font-SFUIDisplay'" class="relative w-full md:w-[80%]">
-              <!-- Email Icon -->
-              <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                <icon size="24" name="ph:envelope-simple-open-duotone" class="text-gray-500"></icon>
-              </div>
-
-              <!-- Input Field -->
-              <input type="emsil" class="w-full bg-[#E2ECFF] h-10 rounded-md pl-10 pr-2 font-[400]"
-                placeholder="Enter your email" v-model="formData.email" required />
-            </div>
-
-            <!-- Action Button -->
-            <button type="submit" class="group relative w-[30%] md:w-[20%] h-10 bg-orange-500 text-white font-bold 
-                hover:bg-gray-200 hover:text-orange-500 hover:text-lg
-                focus:outline-none active:bg-orange-500 active:text-white
-                transition-all duration-300 ease-in-out 
-                before:absolute before:inset-0 before:rounded-md 
-                before:shadow-[inset_0_4px_12px_rgba(255,120,40,0.6)] 
-                before:opacity-0 hover:before:opacity-100">
-
-              <!-- Border Animation -->
-              <span
-                class="ease absolute left-0 top-0 h-0 w-0 border-t-4 border-orange-400 transition-all duration-500 group-hover:w-full"></span>
-              <span
-                class="ease absolute right-0 top-0 h-0 w-0 border-r-4 border-orange-400 transition-all duration-500 group-hover:h-full"></span>
-              <span
-                class="ease absolute bottom-0 right-0 h-0 w-0 border-b-4 border-orange-400 transition-all duration-500 group-hover:w-full"></span>
-              <span
-                class="ease absolute bottom-0 left-0 h-0 w-0 border-l-4 border-orange-400 transition-all duration-500 group-hover:h-full"></span>
-
-              Action
-            </button>
-
-          </form>
-        </div>
-      </div>
-    </div>
-    <div class="px-4 pt-12 pb-8 bg-[#042D7C] ">
-    <div class="container mx-auto max-w-[1300px] lg:max-w-[950px] xl:max-w-[1160px] min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px]   px-4 md:px-8 lg:px-1 xl:px-0">
-      <div class="flex flex-col justify-center items-center gap-y-4 ">
-<!--        <img src="/images/logo/ssllogo.svg" alt="logo" />-->
-        <p :class="locale === 'bn' ? 'font-HindSiliguri' : 'font-SFUIDisplay'" class="text-[14px] text-center md:text-[18px] font-[500] text-white">© {{ currentYear }} All Rights Reserved
-          by <strong>Online Tech Academy</strong>.</p>
-      </div>
-    </div>
+      </footer>
     </div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.footer {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effects for list items */
+ul li {
+  transition: transform 0.3s ease;
+}
+
+ul li:hover {
+  transform: translateX(5px);
+}
+
+/* Social media icon hover effects */
+.flex.space-x-4 a {
+  transition: all 0.3s ease;
+}
+
+.flex.space-x-4 a:hover {
+  transform: translateY(-3px);
+}
+</style>

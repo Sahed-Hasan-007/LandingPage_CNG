@@ -41,7 +41,7 @@ const services = [
 </script>
 
 <template>
-  <div id="sustainability" ref="sectionRef" class="container relative mx-auto max-w-[1300px] lg:max-w-[1005px] xl:max-w-[1160px] min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px] my-8 md:my-32 2xl:my-32 px-4 md:px-8 lg:px-0">
+  <div id="contact" ref="sectionRef" class="container relative mx-auto max-w-[1300px] lg:max-w-[1005px] xl:max-w-[1160px] min-[1300px]:max-w-[1256px] 2xl:max-w-[1300px] my-8 md:my-32 2xl:my-32 px-4 md:px-8 lg:px-0">
     <div
         class="absolute -top-[58px] md:-top-[160px] left-1/2 -translate-x-1/2 border-2 border-green-500 bg-white px-6 py-3 text-[18px] md:text-[24px] shadow-lg shadow-black/40 rounded-lg font-bold z-10 hover:shadow-xl hover:shadow-green-500/30 transition-all duration-300">
       {{ $t('nav.contactUs') }}
